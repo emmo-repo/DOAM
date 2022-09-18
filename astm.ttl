@@ -1,0 +1,922 @@
+@prefix : <http://iso.org/astm#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+: a owl:Ontology ;
+    owl:versionIRI <http://iso.org/v1/astm#> .
+
+:ASTM_3.1.1 a owl:Class ;
+    :astmDef "Machine used for 3D printing (3.3.1)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.1.1"^^xsd:string ;
+    :astmNo "3.1.1"^^xsd:string ;
+    :prefLabel "3DPrinter"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.1.10 a owl:Class ;
+    :astmDef "Type of additive manufacturing (3.1.2) process in which parts (3.9.1) are fabricated in a single operation where the basic geometric shape and basic material properties of the intended product are achieved simultaneously."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.1.10"^^xsd:string ;
+    :astmNo "3.1.10"^^xsd:string ;
+    :prefLabel "Single-StepProcess"@en ;
+    rdfs:comment "Removal of the support structure and cleaning can many times be necessary; however, in this context, this operation is not considered as a separate process step."@en,
+        "The principle of single-step and multi-step processes (3.1.9) is further discussed in Annex B."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.1.2 a owl:Class ;
+    :altLabel "AM"@en ;
+    :astmDef "Process of joining materials to make parts (3.9.1) from 3D model data, usually layer (3.3.7) upon layer, as opposed to subtractive manufacturing and formative manufacturing methodologies."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.1.2"^^xsd:string ;
+    :astmNo "3.1.2"^^xsd:string ;
+    :prefLabel "AdditiveManufacturing"@en ;
+    rdfs:comment "Historical terms include: additive fabrication, additive processes, additive techniques, additive layer manufacturing, layer manufacturing, solid freeform fabrication and freeform fabrication."@en,
+        "The meaning of “additive-”, “subtractive-” and “formative-” manufacturing methodologies is further discussed in Annex B."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.1.3 a owl:Class ;
+    :altLabel "AdditiveManufacturingEquipment"@en,
+        "AdditiveManufacturingSystem"@en ;
+    :astmDef "Machine and auxiliary equipment used for additive manufacturing (3.1.2)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.1.3"^^xsd:string ;
+    :astmNo "3.1.3"^^xsd:string ;
+    :prefLabel "AdditiveSystem"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.1.4 a owl:Class ;
+    :astmDef "Section of the additive manufacturing system (3.1.3) including hardware, machine control software, required set-up software and peripheral accessories necessary to complete a build cycle (3.3.8) for producing parts (3.9.1)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.1.4"^^xsd:string ;
+    :astmNo "3.1.4"^^xsd:string ;
+    :prefLabel "AMMachine"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.1.5 a owl:Class ;
+    :astmDef "Operator of or entity using an AM machine (3.1.4)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.1.5"^^xsd:string ;
+    :astmNo "3.1.5"^^xsd:string ;
+    :prefLabel "AMMachineUser"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.1.6 a owl:Class ;
+    :altLabel "AdditiveSystemUser"@en ;
+    :astmDef "Operator of or entity using an entire additive manufacturing system (3.1.3) or any component of an additive system (3.1.3)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.1.6"^^xsd:string ;
+    :astmNo "3.1.6"^^xsd:string ;
+    :prefLabel "AMSystemUser"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.1.7 a owl:Class ;
+    :astmDef "<Of a machine; unless otherwise designated by the machine builder> side of the machine that the operator faces to access the user interface, or primary viewing window, or both."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.1.7"^^xsd:string ;
+    :astmNo "3.1.7"^^xsd:string ;
+    :prefLabel "Front"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.1.8 a owl:Class ;
+    :astmDef "Provider of material/feedstock (3.6.6) to be processed in an additive manufacturing system (3.1.3)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.1.8"^^xsd:string ;
+    :astmNo "3.1.8"^^xsd:string ;
+    :prefLabel "MaterialSupplier"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.1.9 a owl:Class ;
+    :astmDef "Type of additive manufacturing (3.1.2) process in which parts (3.9.1) are fabricated in two or more operations where the first typically provides the basic geometric shape and the following consolidates the part to the fundamental properties of the intended material."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.1.9"^^xsd:string ;
+    :astmNo "3.1.9"^^xsd:string ;
+    :prefLabel "Multi-StepProcess"@en ;
+    rdfs:comment "Fundamental properties of the intended product material are typically metallic properties for intended metallic products, ceramic properties for intended ceramic products, polymer properties for intended polymer (plastic) products and composite material properties for products intended to be made of a composite material."@en,
+        "Removal of the support structure and cleaning can many times be necessary; however, in this context, this operation is not considered as a separate process step."@en,
+        "The principle of single-step (3.1.10) and multi-step processes is further discussed in Annex B."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.10.1 a owl:Class ;
+    :astmDef "Physical representation of all or a component of a product that, although limited in some way, can be used for analysis, design and evaluation."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.10.1"^^xsd:string ;
+    :astmNo "3.10.1"^^xsd:string ;
+    :prefLabel "Prototype"@en ;
+    rdfs:comment "Requirements for parts (3.9.1) used as prototypes depend on the individual needs for analysis and evaluation and are therefore typically determined in agreement between supplier and end-user."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.10.2 a owl:Class ;
+    :astmDef "Set of moulds, dies and other devices used for prototyping purposes."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.10.2"^^xsd:string ;
+    :astmNo "3.10.2"^^xsd:string ;
+    :prefLabel "PrototypeTooling"@en ;
+    rdfs:comment "Prototype tooling is sometimes referred to as bridge tooling or soft tooling."@en,
+        "This type of tooling can sometimes be used to test the tool design and/or to produce end-use parts (3.9.1) while production tooling is being manufactured. On these occasions, the tooling is typically referred to as bridge tooling."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.10.3 a owl:Class ;
+    :astmDef "<In additive manufacturing> application of additive manufacturing (3.1.2) intended for reducing the time needed for producing prototypes (3.10.1)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.10.3"^^xsd:string ;
+    :astmNo "3.10.3"^^xsd:string ;
+    :prefLabel "RapidPrototyping"@en ;
+    rdfs:comment "Historically, rapid prototyping (RP) was the first commercially significant application for additive manufacturing and has therefore been commonly used as a general term for this type of technology."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.10.4 a owl:Class ;
+    :astmDef "<In additive manufacturing> application of additive manufacturing (3.1.2) intended for the production of tools or tooling components with reduced lead times as compared to conventional tooling manufacturing."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.10.4"^^xsd:string ;
+    :astmNo "3.10.4"^^xsd:string ;
+    :prefLabel "RapidTooling"@en ;
+    rdfs:comment "Besides additive manufacturing, the term “rapid tooling” can also apply to the production of tools with reduced lead times by subtractive manufacturing methods, such as CNC milling, etc."@en,
+        "Rapid tooling can be produced directly by the additive manufacturing process or indirectly by producing patterns that are in turn used in a secondary process to produce the actual tools."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.11.1 a owl:Class ;
+    :astmDef "Closeness of agreement between a measured result and an accepted reference value."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.11.1"^^xsd:string ;
+    :astmNo "3.11.1"^^xsd:string ;
+    :prefLabel "Accuracy"@en ;
+    rdfs:comment "In the context of additive manufacturing (3.1.2), the accepted reference is typically the digital model."@en,
+        "The accuracy of an additive manufacturing process can be different in x , y and z -directions. This means that a part accuracy in these cases is dependent on the part orientation relative to the machine coordinate system."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.11.2 a owl:Class ;
+    :astmDef "<Build process> closeness of agreement between the results obtained on multiple parts under prescribed conditions."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.11.2"^^xsd:string ;
+    :astmNo "3.11.2"^^xsd:string ;
+    :prefLabel "Precision"@en ;
+    rdfs:comment "Precision depends on inherent variations in the build process and does not relate to the accepted reference value."@en,
+        "The precision of an additive manufacturing (3.1.2) process can be dependent on the location within the build space (3.3.3) and can also be different in x , y and z -directions."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.11.3 a owl:Class ;
+    :astmDef "Dimensions of the smallest part feature that can controllably be built."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.11.3"^^xsd:string ;
+    :astmNo "3.11.3"^^xsd:string ;
+    :prefLabel "Resolution"@en ;
+    rdfs:comment "In a layer-wise building process, the resolution in z -direction is typically identical to the layer thickness."@en,
+        "In the context of additive manufacturing (3.1.2), the dimensions are typically recorded in x -, y - and z -directions."@en,
+        "The resolution of the part (3.9.1) can vary in different directions due to the orientation of the part during the build cycle (3.3.8)."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.11.4 a owl:Class ;
+    :astmDef "State of parts (3.9.1) made by an additive process before any post-processing (3.6.10), besides, if necessary, the removal from a build platform (3.3.5) as well as the removal of support (3.3.9) and/or unprocessed feedstock (3.6.6)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.11.4"^^xsd:string ;
+    :astmNo "3.11.4"^^xsd:string ;
+    :prefLabel "As-Built,Adjective"@en ;
+    rdfs:comment "As-Built condition can refer to parts with or without supports, on or off the build platform."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.11.5 a owl:Class ;
+    :astmDef "State representing the part (3.9.1) to be built by an additive process in digital form, typically as 3D model data."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.11.5"^^xsd:string ;
+    :astmNo "3.11.5"^^xsd:string ;
+    :prefLabel "As-Designed,Adjective"@en ;
+    rdfs:comment "The digital model can be expressed as a proprietary CAD-file, AMF-file (3.4.1), STL-file (3.4.6), STEP-file (3.4.5) or any other similar form of 3D model data."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.11.6 a owl:Class ;
+    :astmDef "State in which the material of the fabricated part is without significant content of voids."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.11.6"^^xsd:string ;
+    :astmNo "3.11.6"^^xsd:string ;
+    :prefLabel "FullyDense,Adjective"@en ;
+    rdfs:comment "In practice, material completely free of voids is difficult to produce by any manufacturing process and some micro-porosity is generally present."@en,
+        "The significance and the permissible content of voids are typically determined based on the requirements for the application of the final product."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.11.7 a owl:Class ;
+    :astmDef "Condition where the components require little post-processing (3.6.10) to meet dimensional tolerance."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.11.7"^^xsd:string ;
+    :astmNo "3.11.7"^^xsd:string ;
+    :prefLabel "NearNetShape,Adjective"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.11.8 a owl:Class ;
+    :astmDef "<Property> presence of small voids in a part (3.9.1) making it less than fully dense (3.11.6)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.11.8"^^xsd:string ;
+    :astmNo "3.11.8"^^xsd:string ;
+    :prefLabel "Porosity"@en ;
+    rdfs:comment "Porosity can be quantified as a ratio, expressed as a percentage of the volume of voids to the total volume of the part."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.11.9 a owl:Class ;
+    :astmDef "Degree of alignment of two or more measurements of the same property using the same equipment and in the same environment."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.11.9"^^xsd:string ;
+    :astmNo "3.11.9"^^xsd:string ;
+    :prefLabel "Repeatability"@en ;
+    rdfs:comment "In additive manufacturing (3.1.2), repeatability typically refers to the degree of alignment of measurable properties between identical parts (3.9.1), produced using the same process parameters (3.3.10) and system set-up (3.3.11) but in different build cycles (3.3.8)."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.12.1 a owl:Class ;
+    :astmDef "Set of instructions specifying the process of verification including appropriate resources and sequence of inspections to be referenced by the manufacturing plan (3.3.13)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.12.1"^^xsd:string ;
+    :astmNo "3.12.1"^^xsd:string ;
+    :prefLabel "InspectionPlan"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.12.2 a owl:Class ;
+    :altLabel "FirstProductionPart"@en ;
+    :astmDef "Part (3.9.1) submitted for testing and evaluation for conformance with specified requirements stipulated by a purchase order or otherwise before or in the initial stages of production."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.12.2"^^xsd:string ;
+    :astmNo "3.12.2"^^xsd:string ;
+    :prefLabel "FirstArticle"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.12.3 a owl:Class ;
+    :astmDef "Part (3.9.1) with characteristics similar to the desired final part(s) which may have different geometry, scale or features that can be easily measured or characterized."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.12.3"^^xsd:string ;
+    :astmNo "3.12.3"^^xsd:string ;
+    :prefLabel "ReferencePart"@en ;
+    rdfs:comment "Reference parts are typically sacrificial parts with simple geometries that are used to verify build properties and reduce measurement effort."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.12.4 a owl:Class ;
+    :altLabel "Pre-ShipmentInspection"@en ;
+    :astmDef "Process of verification of manufactured parts (3.9.1) prior to shipment in order to confirm the fulfilment of the requirements stipulated by a purchase order or otherwise."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.12.4"^^xsd:string ;
+    :astmNo "3.12.4"^^xsd:string ;
+    :prefLabel "FinalInspection"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.12.5 a owl:Class ;
+    :astmDef "Process of demonstrating whether an entity is capable of fulfilling specified requirements."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.12.5"^^xsd:string ;
+    :astmNo "3.12.5"^^xsd:string ;
+    :prefLabel "Qualification"@en ;
+    rdfs:comment "In additive manufacturing (3.1.2), qualification typically involves parts (3.9.1), materials, equipment, operators and processes."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.2.1 a owl:Class ;
+    :altLabel "BJT"@en ;
+    :astmDef "Additive manufacturing (3.1.2) process in which a liquid bonding agent is selectively deposited to join powder materials."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.2.1"^^xsd:string ;
+    :astmNo "3.2.1"^^xsd:string ;
+    :prefLabel "BinderJetting"@en ;
+    rdfs:comment "Identification of different binder jetting processes shall be consistent with the method described in Annex A."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.2.2 a owl:Class ;
+    :altLabel "DED"@en ;
+    :astmDef "Additive manufacturing (3.1.2) process in which focused thermal energy is used to fuse materials by melting as they are being deposited."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.2.2"^^xsd:string ;
+    :astmNo "3.2.2"^^xsd:string ;
+    :prefLabel "DirectedEnergyDeposition"@en ;
+    rdfs:comment "Identification of different directed energy deposition processes shall be consistent with the method described in Annex A."@en,
+        "“Focused thermal energy” means that an energy source (for example laser, electron beam or plasma arc) is focused to melt the materials being deposited."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.2.3 a owl:Class ;
+    :altLabel "MEX"@en ;
+    :astmDef "Additive manufacturing (3.1.2) process in which material is selectively dispensed through a nozzle or orifice."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.2.3"^^xsd:string ;
+    :astmNo "3.2.3"^^xsd:string ;
+    :prefLabel "MaterialExtrusion"@en ;
+    rdfs:comment "Identification of different material extrusion processes shall be consistent with the method described in Annex A."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.2.4 a owl:Class ;
+    :altLabel "MJT"@en ;
+    :astmDef "Additive manufacturing (3.1.2) process in which droplets of feedstock material are selectively deposited."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.2.4"^^xsd:string ;
+    :astmNo "3.2.4"^^xsd:string ;
+    :prefLabel "MaterialJetting"@en ;
+    rdfs:comment "Example feedstock materials for material jetting include photopolymer resin and wax."@en,
+        "Identification of different material jetting processes shall be consistent with the method described in Annex A."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.2.5 a owl:Class ;
+    :altLabel "PBF"@en ;
+    :astmDef "Additive manufacturing (3.1.2) process in which thermal energy selectively fuses regions of a powder bed (3.8.5)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.2.5"^^xsd:string ;
+    :astmNo "3.2.5"^^xsd:string ;
+    :prefLabel "PowderBedFusion"@en ;
+    rdfs:comment "Identification of different powder bed fusion processes shall be consistent with the method described in Annex A."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.2.6 a owl:Class ;
+    :altLabel "SHL"@en ;
+    :astmDef "Additive manufacturing (3.1.2) process in which sheets of material are bonded to form a part (3.9.1)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.2.6"^^xsd:string ;
+    :astmNo "3.2.6"^^xsd:string ;
+    :prefLabel "SheetLamination"@en ;
+    rdfs:comment "Identification of different sheet lamination processes shall be consistent with the method described in Annex A."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.2.7 a owl:Class ;
+    :altLabel "VPP"@en ;
+    :astmDef "Additive manufacturing (3.1.2) process in which liquid photopolymer in a vat is selectively cured by light-activated polymerization."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.2.7"^^xsd:string ;
+    :astmNo "3.2.7"^^xsd:string ;
+    :prefLabel "VatPhotopolymerization"@en ;
+    rdfs:comment "Identification of different vat photopolymerization processes shall be consistent with the method described in Annex A."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.3.1 a owl:Class ;
+    :astmDef "Fabrication of objects through the deposition of a material using a print head, nozzle or another printer technology."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.3.1"^^xsd:string ;
+    :astmNo "3.3.1"^^xsd:string ;
+    :prefLabel "3DPrinting"@en ;
+    rdfs:comment "This term is often used in a non-technical context synonymously with additive manufacturing (3.1.2) and, in these cases, typically associated with machines used for non-industrial purposes including personal use."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.3.10 a owl:Class ;
+    :astmDef "Operating parameters and system settings used during a build cycle (3.3.8)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.3.10"^^xsd:string ;
+    :astmNo "3.3.10"^^xsd:string ;
+    :prefLabel "ProcessParameters"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.3.11 a owl:Class ;
+    :astmDef "Configuration of the additive manufacturing system (3.1.3) for a build cycle."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.3.11"^^xsd:string ;
+    :astmNo "3.3.11"^^xsd:string ;
+    :prefLabel "SystemSet-Up"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.3.12 a owl:Class ;
+    :astmDef "Set of manufactured parts (3.9.1) having commonality between feedstock (3.6.6), production run (3.3.14), additive manufacturing system (3.1.3) and post-processing (3.6.10) steps (if required) as recorded on a single manufacturing work order."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.3.12"^^xsd:string ;
+    :astmNo "3.3.12"^^xsd:string ;
+    :prefLabel "ManufacturingLot"@en ;
+    rdfs:comment "The additive manufacturing system can include one or several AM machines (3.1.4) and/or post-processing machine units as agreed by AM (3.1.2) provider and customer."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.3.13 a owl:Class ;
+    :astmDef "Document setting out the specific manufacturing practices, technical resources and sequences of activities relevant to the production of a particular product including any specified acceptance criteria at each stage."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.3.13"^^xsd:string ;
+    :astmNo "3.3.13"^^xsd:string ;
+    :prefLabel "ManufacturingPlan"@en ;
+    rdfs:comment "For additive manufacturing (3.1.2), the manufacturing plan typically includes, but is not limited to, process parameters (3.3.10), preparation and post processing (3.6.10) operations as well as relevant verification methods."@en,
+        "Manufacturing plans are typically required under a quality management system such as ISO 9001 and ASQ C1."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.3.14 a owl:Class ;
+    :astmDef "Set of all parts (3.9.1) produced in one build cycle (3.3.8) or sequential series of build cycles using the same feedstock (3.6.6) batch and process conditions."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.3.14"^^xsd:string ;
+    :astmNo "3.3.14"^^xsd:string ;
+    :prefLabel "ProductionRun"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.3.15 a owl:Class ;
+    :astmDef "Sequence of operations necessary for the part (3.9.1) to achieve desired functionality and properties."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.3.15"^^xsd:string ;
+    :astmNo "3.3.15"^^xsd:string ;
+    :prefLabel "ProcessChain"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.3.2 a owl:Class ;
+    :astmDef "Enclosed location within the additive manufacturing system (3.1.3) where the parts (3.9.1) are fabricated."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.3.2"^^xsd:string ;
+    :astmNo "3.3.2"^^xsd:string ;
+    :prefLabel "BuildChamber"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.3.3 a owl:Class ;
+    :astmDef "Location where it is possible for parts (3.9.1) to be fabricated, typically within the build chamber (3.3.2) or on a build platform (3.3.5)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.3.3"^^xsd:string ;
+    :astmNo "3.3.3"^^xsd:string ;
+    :prefLabel "BuildSpace"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.3.4 a owl:Class ;
+    :astmDef "Total usable volume available in the machine for building parts (3.9.1)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.3.4"^^xsd:string ;
+    :astmNo "3.3.4"^^xsd:string ;
+    :prefLabel "BuildVolume"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.3.5 a owl:Class ;
+    :astmDef "<Of a machine> base which provides a surface upon which the building of the parts (3.9.1) is started and supported throughout the build process."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.3.5"^^xsd:string ;
+    :astmNo "3.3.5"^^xsd:string ;
+    :prefLabel "BuildPlatform"@en ;
+    rdfs:comment "In some systems, the parts (3.9.1) are built attached to the build platform, either directly or through a support (3.3.9) structure. In other systems, such as certain types of powder bed (3.8.5) systems, a direct mechanical fixture between the part and the build platform is not necessarily required."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.3.6 a owl:Class ;
+    :astmDef "Area where material is added, normally on the last deposited layer (3.3.7), which becomes the foundation upon which the next layer is formed."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.3.6"^^xsd:string ;
+    :astmNo "3.3.6"^^xsd:string ;
+    :prefLabel "BuildSurface"@en ;
+    rdfs:comment "For the first layer, the build surface is often the build platform (3.3.5)."@en,
+        "If the orientation of the material deposition or consolidation means (or both) is (are) variable, it may be defined relative to the build surface."@en,
+        "In the case of directed energy deposition (3.2.2) processes, the build surface can be an existing part onto which material is added."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.3.7 a owl:Class ;
+    :astmDef "<Matter> material laid out, or spread, to create a surface."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.3.7"^^xsd:string ;
+    :astmNo "3.3.7"^^xsd:string ;
+    :prefLabel "Layer"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.3.8 a owl:Class ;
+    :astmDef "Single process cycle in which one or more components are built by successive joining of material within the build space (3.3.3) of the additive manufacturing system (3.1.3)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.3.8"^^xsd:string ;
+    :astmNo "3.3.8"^^xsd:string ;
+    :prefLabel "BuildCycle"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.3.9 a owl:Class ;
+    :astmDef "Structure separate from the part (3.9.1) geometry that is created to provide a base and anchor for the part during the building process."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.3.9"^^xsd:string ;
+    :astmNo "3.3.9"^^xsd:string ;
+    :prefLabel "Support"@en ;
+    rdfs:comment "For certain processes such as material extrusion (3.2.3) and material jetting (3.2.4), the support material can be different from the part material and deposited from a separate nozzle or print head."@en,
+        "For certain processes such as metal powder bed fusion (3.2.5) processes, auxiliary supports can be added to serve as an additional heat sink for the part during the building process."@en,
+        "Supports are typically removed from the part prior to use."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.4.1 a owl:Class ;
+    :altLabel "AMF"@en ;
+    :astmDef "File format for communicating additive manufacturing (3.1.2) model data including a description of the 3D surface geometry with native support for colour, materials, lattices, textures, constellations and metadata."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.4.1"^^xsd:string ;
+    :astmNo "3.4.1"^^xsd:string ;
+    :prefLabel "AdditiveManufacturingFileFormat"@en ;
+    rdfs:comment "Additive Manufacturing File Format (AMF) can represent one of multiple objects arranged in a constellation. Similar to STL (3.4.6), the surface geometry is represented by a triangular mesh, but in AMF the triangles can also be curved. AMF can also specify the material and colour of each volume and the colour of each triangle in the mesh. ISO/ASTM 52915 [ 7 ] gives the standard specification of AMF."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.4.10 a owl:Class ;
+    :astmDef "Information unit within an XML[10] document consisting of a start tag, an end tag, the content between the tags and any attributes (3.4.8)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.4.10"^^xsd:string ;
+    :astmNo "3.4.10"^^xsd:string ;
+    :prefLabel "Element"@en ;
+    rdfs:comment "In the XML framework of AMF (3.4.1), an element can contain data, attributes structures such as constellations, as well as including other elements."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.4.11 a owl:Class ;
+    :astmDef "Three- or four-sided polygon that represents an element of a 3D polygonal mesh surface or model."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.4.11"^^xsd:string ;
+    :astmNo "3.4.11"^^xsd:string ;
+    :prefLabel "Facet"@en ;
+    rdfs:comment "Triangular facets are used in the file formats most significant to AM (3.1.2) : AMF (3.4.1) and STL (3.4.6) ; however, AMF files permit a triangular facet to be curved."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.4.12 a owl:Class ;
+    :astmDef "Mathematical or digital representation of an object as a set of planar or curved surfaces, or both, that can, but does not necessarily have to represent a closed volume."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.4.12"^^xsd:string ;
+    :astmNo "3.4.12"^^xsd:string ;
+    :prefLabel "SurfaceModel"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.4.13 a owl:Class ;
+    :altLabel "3DDigitizing"@en ;
+    :astmDef "Method of acquiring the shape and size of an object as a 3-dimensional representation by recording x, y, z coordinates on the object’s surface and through software converting the collection of points into digital data."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.4.13"^^xsd:string ;
+    :astmNo "3.4.13"^^xsd:string ;
+    :prefLabel "3DScanning"@en ;
+    rdfs:comment "In additive manufacturing process chains, 3D scanning can typically be used for generation of surface models, in situ monitoring, non-destructive testing, as well as verification of the part geometry."@en,
+        "Typical methods use some amount of automation, coupled with a touch probe, optical sensor or other device."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.4.2 a owl:Class ;
+    :astmDef "Software reading (parsing) the AMF (3.4.1) file for fabrication, visualization or analysis."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.4.2"^^xsd:string ;
+    :astmNo "3.4.2"^^xsd:string ;
+    :prefLabel "AMFConsumer"@en ;
+    rdfs:comment "Amf files are typically imported by additive manufacturing equipment (3.1.3), as well as viewing, analysis and verification software."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.4.3 a owl:Class ;
+    :astmDef "Software reading and rewriting the AMF (3.4.1) file for conversion."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.4.3"^^xsd:string ;
+    :astmNo "3.4.3"^^xsd:string ;
+    :prefLabel "AMFEditor"@en ;
+    rdfs:comment "Amf editor applications are used to convert an AMF from one form to another, for example to convert all curved triangles to flat triangles or convert porous material specification into an explicit mesh surface."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.4.4 a owl:Class ;
+    :astmDef "Software writing (generating) the AMF (3.4.1) file from original geometric data."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.4.4"^^xsd:string ;
+    :astmNo "3.4.4"^^xsd:string ;
+    :prefLabel "AMFProducer"@en ;
+    rdfs:comment "Amf files are typically exported by CAD software, scanning software or directly from computational geometry algorithms."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.4.5 a owl:Class ;
+    :astmDef "Standard for the exchange of product model data."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.4.5"^^xsd:string ;
+    :astmNo "3.4.5"^^xsd:string ;
+    :prefLabel "STEP"@en ;
+    rdfs:comment "Iso 10303-238 , commonly referred to as STEP-NC, specifies the slicing operation and other mechanical commands in the AM process."@en,
+        "This is an International Standard that provides a representation of product information along with the necessary mechanisms and definitions to enable product data to be exchanged. ISO 10303 [ 4 ] applies to the representation of product information, including components and assemblies, the exchange of product data, including storing, transferring, accessing and archiving."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.4.6 a owl:Class ;
+    :astmDef "File format for model data describing the surface geometry of an object as a tessellation of triangles used to communicate 3D geometries to machines in order to build physical parts (3.9.1)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.4.6"^^xsd:string ;
+    :astmNo "3.4.6"^^xsd:string ;
+    :prefLabel "STL"@en ;
+    rdfs:comment "The STL file format was originally developed as part of the CAD package for the early STereoLithography Apparatus, thus referring to that process. It is sometimes also described as “Standard Triangulation Language” or “Standard Tessellation Language”, though it has never been recognized as an official standard by any standards developing organization."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.4.7 a owl:Class ;
+    :altLabel "ProductDataExchangeSpecification"@en ;
+    :astmDef "Data exchange specification using STEP (3.4.5)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.4.7"^^xsd:string ;
+    :astmNo "3.4.7"^^xsd:string ;
+    :prefLabel "PDES"@en ;
+    rdfs:comment "Originally, a product data exchange specification developed in the 1980s by the IGES/PDES Organization, a program of US Product Data Association (USPRO). It was adopted as the basis for and subsequently superseded by ISO 10303 [ 4 ] STEP."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.4.8 a owl:Class ;
+    :astmDef "<Data> characteristic representing one or more aspects, descriptors or elements of the data."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.4.8"^^xsd:string ;
+    :astmNo "3.4.8"^^xsd:string ;
+    :prefLabel "Attribute"@en ;
+    rdfs:comment "In object-oriented systems, attributes are characteristics of objects. In Extensible Markup Language (XML) [ 10 ] , attributes are characteristics of elements (3.3.10)."@en,
+        "In the AMF (3.4.1) -file, attributes can, for example, be used to carry notices enabling backwards traceability to CAD components, or markers that allow track and trace mechanisms for the file."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.4.9 a owl:Class ;
+    :astmDef "<Data> remark in source code which does not affect the behaviour of the program."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.4.9"^^xsd:string ;
+    :astmNo "3.4.9"^^xsd:string ;
+    :prefLabel "Comment"@en ;
+    rdfs:comment "Comments are used for enhancing human readability of the file and for debugging purposes."@en,
+        "In the AMF (3.4.1) -file, comments can, for example, be used to carry material specification or notices enabling backwards traceability to CAD components."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.5.1 a owl:Class ;
+    :astmDef "<Of a part> orthogonally oriented minimum perimeter cuboid that can span the maximum extents of the points on the surface of a 3D part (3.9.1)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.5.1"^^xsd:string ;
+    :astmNo "3.5.1"^^xsd:string ;
+    :prefLabel "BoundingBox"@en ;
+    rdfs:comment "Where the manufactured part includes the test geometry plus additional external features (for example labels, tabs or raised lettering), the bounding box may be specified according to the test part geometry excluding the additional external features if noted. Different varieties of bounding boxes are illustrated in ISO/ASTM 52921 [ 8 ]."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.5.10 a owl:Class ;
+    :astmDef "Situation when parts (3.9.1) are made in one build cycle (3.3.8) and are located such that their bounding boxes (3.5.1), arbitrarily oriented (3.5.2) or otherwise, overlap."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.5.10"^^xsd:string ;
+    :astmNo "3.5.10"^^xsd:string ;
+    :prefLabel "Nesting,Participle"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.5.11 a owl:Class ;
+    :astmDef "Three-Dimensional coordinate system as defined by a fixed point on the build platform (3.3.5), with the three principal axes labelled x-axis (3.5.16), y-axis (3.5.17) and z-axis (3.5.18) with rotary axis about each of these axes labelled A, B and C, respectively, where the angles between x-, y- and z-, can be Cartesian or defined by the machine manufacturer."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.5.11"^^xsd:string ;
+    :astmNo "3.5.11"^^xsd:string ;
+    :prefLabel "MachineCoordinateSystem"@en ;
+    rdfs:comment "Machine coordinate system is fixed relative to the machine, as opposed to coordinate systems associated with the build surface (3.3.6), which can be translated or rotated. Machine coordinate system is illustrated in ISO/ASTM 52921 [ 8 ]."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.5.12 a owl:Class ;
+    :altLabel "(0,0,0)"@en,
+        "ZeroPoint"@en ;
+    :astmDef "<When using x-, y- and z-coordinates> designated universal reference point at which the three primary axes in a coordinate system intersect."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.5.12"^^xsd:string ;
+    :astmNo "3.5.12"^^xsd:string ;
+    :prefLabel "Origin"@en ;
+    rdfs:comment "Coordinate system can be Cartesian or as defined by the machine manufacturer. The concept of origin is illustrated in ISO/ASTM 52921 [ 8 ]."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.5.13 a owl:Class ;
+    :astmDef "Origin (3.5.12) most commonly located at the centre of the build platform (3.3.5) and fixed on the build facing surface."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.5.13"^^xsd:string ;
+    :astmNo "3.5.13"^^xsd:string ;
+    :prefLabel "BuildOrigin"@en ;
+    rdfs:comment "The location of the build origin can be defined otherwise by the build set-up."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.5.14 a owl:Class ;
+    :altLabel "MachineHome"@en,
+        "MachineZeroPoint"@en ;
+    :astmDef "Origin (3.5.12) as defined by the machine manufacturer."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.5.14"^^xsd:string ;
+    :astmNo "3.5.14"^^xsd:string ;
+    :prefLabel "MachineOrigin"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.5.15 a owl:Class ;
+    :astmDef "Location of the part (3.9.1) within the build volume (3.3.4)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.5.15"^^xsd:string ;
+    :astmNo "3.5.15"^^xsd:string ;
+    :prefLabel "PartLocation"@en ;
+    rdfs:comment "The part location is normally specified by the x-, y- and z-coordinates for the position of the geometric centre (3.5.5) of the part's bounding box (3.5.1) with respect to the build origin (3.5.13). Part location is illustrated in ISO/ASTM 52921 [ 8 ]."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.5.16 a owl:Class ;
+    :astmDef "<Of a machine; unless otherwise designated by the machine builder> axis in the machine coordinate system (3.5.11) that runs parallel to the front (3.1.7) of the machine and perpendicular to the y-axis (3.5.17) and z-axis (3.5.18)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.5.16"^^xsd:string ;
+    :astmNo "3.5.16"^^xsd:string ;
+    :prefLabel "X-Axis"@en ;
+    rdfs:comment "It is common that the x -axis is horizontal and parallel to one of the edges of the build platform (3.3.5)."@en,
+        "Unless otherwise designated by the machine builder, the positive x -direction runs from left to right as viewed from the front of the machine while facing toward the build volume (3.3.4) origin (3.5.12)."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.5.17 a owl:Class ;
+    :astmDef "<Of a machine; unless otherwise designated by the machine builder> axis in the machine coordinate system (3.5.11) that runs perpendicular to the x-axis (3.5.16) and z-axis (3.5.18)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.5.17"^^xsd:string ;
+    :astmNo "3.5.17"^^xsd:string ;
+    :prefLabel "Y-Axis"@en ;
+    rdfs:comment "In the case of building in the downwards z- positive direction, the positive y- direction then runs from the back of the machine to the front as viewed from the front of the machine."@en,
+        "It is common that the y- axis is horizontal and parallel to one of the edges of the build platform (3.3.5)."@en,
+        "Unless otherwise designated by the machine builder, the positive direction is defined in ISO 841 [ 1 ] to make a right-hand set of coordinates. In the most common case of an upwards z- positive direction, the positive y- direction then runs from the front (3.1.7) to the back of the machine as viewed from the front of the machine."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.5.18 a owl:Class ;
+    :astmDef "<Of a machine; unless otherwise designated by the machine builder> axis in the machine coordinate system (3.5.11) that runs perpendicular to the x-axis (3.5.16) and y-axis (3.5.17)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.5.18"^^xsd:string ;
+    :astmNo "3.5.18"^^xsd:string ;
+    :prefLabel "Z-Axis"@en ;
+    rdfs:comment "For processes employing planar layer-wise addition of material, the positive z- direction is the direction from the first layer to the subsequent layers."@en,
+        "Unless otherwise designated by the machine builder, the positive direction is defined in ISO 841 [ 1 ] to make a right-hand set of coordinates. For processes employing planar layer-wise addition of material, the positive z- direction then runs normal to the layers (3.3.7)."@en,
+        "Where addition of material is possible from multiple directions (such as with certain directed energy deposition (3.2.2) systems), the z- axis can be identified according to the principles in ISO 841:2001, 4.3.3 [ 1 ] , which addresses “swivelling or gimballing.”."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.5.2 a owl:Class ;
+    :astmDef "<Of a part> bounding box (3.5.1) calculated without any constraints on the resulting orientation of the box."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.5.2"^^xsd:string ;
+    :astmNo "3.5.2"^^xsd:string ;
+    :prefLabel "ArbitrarilyOrientedBoundingBox"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.5.3 a owl:Class ;
+    :astmDef "<Of a part> bounding box (3.5.1) for which the surfaces are parallel to the machine coordinate system (3.5.11)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.5.3"^^xsd:string ;
+    :astmNo "3.5.3"^^xsd:string ;
+    :prefLabel "MachineBoundingBox"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.5.4 a owl:Class ;
+    :astmDef "Bounding box (3.5.1) which encloses all of the parts (3.9.1) in a single build."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.5.4"^^xsd:string ;
+    :astmNo "3.5.4"^^xsd:string ;
+    :prefLabel "MasterBoundingBox"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.5.5 a owl:Class ;
+    :altLabel "Centroid"@en ;
+    :astmDef "<Of a bounding box> location at the arithmetic middle of the bounding box (3.5.1)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.5.5"^^xsd:string ;
+    :astmNo "3.5.5"^^xsd:string ;
+    :prefLabel "GeometricCentre"@en ;
+    rdfs:comment "The geometric centre of the bounding box can lie outside the part (3.9.1) that is enclosed by the bounding box."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.5.6 a owl:Class ;
+    :astmDef "Description of the orientation of the bounding box (3.5.1) according to overall length in decreasing magnitude, parallel to the axes of the machine coordinate system (3.5.11)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.5.6"^^xsd:string ;
+    :astmNo "3.5.6"^^xsd:string ;
+    :prefLabel "OrthogonalOrientationNotation"@en ;
+    rdfs:comment "Notation typically consists of a combination of X, Y and Z, each referring to the corresponding axis as defined by the machine coordinate system."@en,
+        "Orthogonal orientation notation requires that the bounding box be aligned with the machine coordinate system. Machine coordinate system and different bounding boxes, including examples of orthogonal orientation notation, are illustrated in ISO/ASTM 52921 [ 8 ]."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.5.7 a owl:Class ;
+    :astmDef "<Of a part> orientation of the part as it is first placed in the build volume (3.3.4)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.5.7"^^xsd:string ;
+    :astmNo "3.5.7"^^xsd:string ;
+    :prefLabel "InitialBuildOrientation"@en ;
+    rdfs:comment "Initial build orientation is illustrated in ISO/ASTM 52921 [ 8 ]."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.5.8 a owl:Class ;
+    :astmDef "Rotation around the geometric centre (3.5.5) of the part’s bounding box (3.5.1) from the specified initial build orientation (3.5.7) of that part (3.9.1)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.5.8"^^xsd:string ;
+    :astmNo "3.5.8"^^xsd:string ;
+    :prefLabel "PartReorientation"@en ;
+    rdfs:comment "Part reorientation is illustrated in ISO/ASTM 52921 [ 8 ]."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.5.9 a owl:Class ;
+    :astmDef "Largest external dimensions of the x-axis (3.5.16), y-axis (3.5.17) and z-axis (3.5.18) within the build space (3.3.3) where parts (3.9.1) can be fabricated."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.5.9"^^xsd:string ;
+    :astmNo "3.5.9"^^xsd:string ;
+    :prefLabel "BuildEnvelope"@en ;
+    rdfs:comment "The dimensions of the build space are larger than the build envelope."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.6.1 a owl:Class ;
+    :astmDef "<Of feedstock> defined quantity of feedstock (3.6.6) with uniform properties and composition."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.6.1"^^xsd:string ;
+    :astmNo "3.6.1"^^xsd:string ;
+    :prefLabel "Batch"@en ;
+    rdfs:comment "For some types of feedstock, for example powders and resins, one batch can consist of virgin (3.6.4) material, used material or a blend of virgin and used materials."@en,
+        "One batch of any feedstock can be used in one or more production runs using different process parameters."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.6.10 a owl:Class ;
+    :astmDef "Process step, or series of process steps, taken after the completion of an additive manufacturing (3.1.2)build cycle (3.3.8) in order to achieve the desired properties in the final product."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.6.10"^^xsd:string ;
+    :astmNo "3.6.10"^^xsd:string ;
+    :prefLabel "Post-Processing"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.6.2 a owl:Class ;
+    :astmDef "<Of feedstock> quantity of feedstock (3.6.6) produced under traceable controlled conditions from a single manufacturing process cycle."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.6.2"^^xsd:string ;
+    :astmNo "3.6.2"^^xsd:string ;
+    :prefLabel "Lot"@en ;
+    rdfs:comment "Source documentation of the feedstock lot is required for several AM (3.1.2) product applications. Source documentation is referred to as a \"statement of conformity\" and an \"inspection document\", or sometimes also referred to as a “certificate of conformance”, “factory certificate” or “certificate of analysis”."@en,
+        "The size of a feedstock lot is determined by the feedstock supplier (3.6.8). It is common that the supplier distributes a portion of a lot to different AM system users (3.1.6)."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.6.3 a owl:Class ;
+    :astmDef "<Feedstock> condition of feedstock (3.6.6) from a single manufacturing lot (3.6.2) before being applied to the additive manufacturing (3.1.2) process."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.6.3"^^xsd:string ;
+    :astmNo "3.6.3"^^xsd:string ;
+    :prefLabel "Virgin,Adjective"@en ;
+    rdfs:comment "Feedstock can degrade over time, independent of being applied to the additive manufacturing process. Feedstock that has undergone any significant change under any condition cannot be regarded as virgin."@en,
+        "Feedstock without significant change from its original condition may still be regarded as virgin."@en,
+        "The requirements for virgin feedstock can vary depending on process, material and application of the final product. A further distinction can be necessary for some materials in specific applications."@en,
+        "The significance and the permissible variation from the original state are typically determined based on the requirements for the application of the final product."@en,
+        "Virgin condition typically means that the feedstock is in the condition as intended by the supplier."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.6.4 a owl:Class ;
+    :astmDef "<Of feedstock> ability of a feedstock (3.6.6) material to be spread out in layers (3.3.7) that fulfil the requirements for the AM (3.1.2) process."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.6.4"^^xsd:string ;
+    :astmNo "3.6.4"^^xsd:string ;
+    :prefLabel "Spreadability"@en ;
+    rdfs:comment "The specification of the conditions for the spreading of a layer in an AM machine (3.1.4), including, but not limited to, the machine setup and the process parameters, are typically determined by the process requirements with respect to the intended application of the final part."@en,
+        "The spreading behaviour of a specific feedstock material depends on the physical properties of that material under the given process conditions."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.6.5 a owl:Class ;
+    :altLabel "Deprecated:BaseMaterial"@en,
+        "Deprecated:OriginalMaterial"@en,
+        "Deprecated:SourceMaterial"@en,
+        "Deprecated:StartingMaterial"@en ;
+    :astmDef "Bulk raw material supplied to the additive manufacturing (3.1.2) building process."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.6.5"^^xsd:string ;
+    :astmNo "3.6.5"^^xsd:string ;
+    :prefLabel "Feedstock"@en ;
+    rdfs:comment "For additive manufacturing building processes, the bulk raw material is typically supplied in various forms such as liquid, powder, suspensions, filaments, sheets, etc."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.6.6 a owl:Class ;
+    :astmDef "Entity that produces the feedstock (3.6.6)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.6.6"^^xsd:string ;
+    :astmNo "3.6.6"^^xsd:string ;
+    :prefLabel "FeedstockManufacturer"@en ;
+    rdfs:comment "In additive manufacturing, the feedstock manufacturer can often be a different entity than the feedstock supplier (3.6.8)."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.6.7 a owl:Class ;
+    :altLabel "FeedstockVendor"@en ;
+    :astmDef "Provider of feedstock (3.6.6)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.6.7"^^xsd:string ;
+    :astmNo "3.6.7"^^xsd:string ;
+    :prefLabel "FeedstockSupplier"@en ;
+    rdfs:comment "In additive manufacturing, the feedstock supplier can often be a different entity than the feedstock manufacturer (3.6.7)."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.6.8 a owl:Class ;
+    :astmDef "Act of uniting two or more units of material into a single unit of material."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.6.8"^^xsd:string ;
+    :astmNo "3.6.8"^^xsd:string ;
+    :prefLabel "Fusion"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.6.9 a owl:Class ;
+    :astmDef "Change the physical properties of a material by means of a chemical reaction."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.6.9"^^xsd:string ;
+    :astmNo "3.6.9"^^xsd:string ;
+    :prefLabel "Cure,Verb"@en ;
+    rdfs:comment "One of the most important curing operations in additive manufacturing is the changing of a polymer resin from liquid to solid by light-activated cross-linking of molecule chains."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.7.1 a owl:Class ;
+    :astmDef "<Material extrusion> removable sheet, to which the part (3.9.1) is attached during the build cycle (3.3.8)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.7.1"^^xsd:string ;
+    :astmNo "3.7.1"^^xsd:string ;
+    :prefLabel "BuildSheet"@en ;
+    rdfs:comment "The build sheet is usually fastened to the build platform by vacuum or by other means."@en,
+        "The purpose for the build sheet is to provide a disposable barrier between the part and build platform (3.3.5) in certain machines."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.7.2 a owl:Class ;
+    :altLabel "ExtrusionHead"@en ;
+    :astmDef "Assembly comprising feedstock (3.6.6) delivery mechanism and extrusion nozzle(s)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.7.2"^^xsd:string ;
+    :astmNo "3.7.2"^^xsd:string ;
+    :prefLabel "ExtruderHead"@en ;
+    rdfs:comment "A common design of the head contains a motorized pinch wheel delivery mechanism to push filament through the extrusion head. The head often contains a heating element."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.7.3 a owl:Class ;
+    :astmDef "Component with an orifice through which feedstock (3.6.6) is extruded."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.7.3"^^xsd:string ;
+    :astmNo "3.7.3"^^xsd:string ;
+    :prefLabel "ExtrusionNozzle"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.7.4 a owl:Class ;
+    :astmDef "Feedstock (3.6.6) characterized by extreme length relative to its uniform cross section."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.7.4"^^xsd:string ;
+    :astmNo "3.7.4"^^xsd:string ;
+    :prefLabel "Filament"@en ;
+    rdfs:comment "Filaments made of metal are commonly referred to as wire."@en,
+        "Polymer filaments are typically manufactured by extrusion and metal filaments by drawing."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.7.5 a owl:Class ;
+    :astmDef "Small mass of preformed feedstock (3.6.6) material, having relatively uniform dimensions in any given batch."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.7.5"^^xsd:string ;
+    :astmNo "3.7.5"^^xsd:string ;
+    :prefLabel "Pellets"@en ;
+    rdfs:comment "Pellets of smaller size can be referred to as micro-pellets."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.8.1 a owl:Class ;
+    :astmDef "<Of feedstock> method of preparation and delivery operations performed on a specific batch of feedstock (3.6.6) as needed for the build cycle (3.3.8)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.8.1"^^xsd:string ;
+    :astmNo "3.8.1"^^xsd:string ;
+    :prefLabel "BatchFeedProcessing"@en ;
+    rdfs:comment "Batch feed processing is distinguished from continuous feed processing (3.8.2) by being limited to a finite amount of feedstock sufficient to complete one or more full build cycles."@en,
+        "Powder batch feed operations can typically include blending or mixing powders to the desired composition, or drying, alternatively humidifying the powder to reach properties desirable for the AM (3.1.2) process."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.8.10 a owl:Class ;
+    :altLabel "LS"@en ;
+    :astmDef "Powder bed fusion (3.2.5) process used to produce objects from powdered materials using one or more lasers to selectively fuse or melt the particles at the surface, layer (3.3.7) upon layer, in an enclosed chamber."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.8.10"^^xsd:string ;
+    :astmNo "3.8.10"^^xsd:string ;
+    :prefLabel "LaserSintering"@en ;
+    rdfs:comment "Most LS machines partially or fully melt the materials they process. The word “sintering” is a historical term and a misnomer, as the process typically involves full or partial melting, as opposed to traditional powdered metal sintering using a mould and heat and/or pressure."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.8.2 a owl:Class ;
+    :astmDef "<Of feedstock> method of preparation and delivery operations performed to supply feedstock (3.6.6) in an uninterrupted process as needed for the build cycle (3.3.8)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.8.2"^^xsd:string ;
+    :astmNo "3.8.2"^^xsd:string ;
+    :prefLabel "ContinuousFeedProcessing"@en ;
+    rdfs:comment "Continuous feed processing is distinguished from batch feed processing (3.8.1) by not being limited to a finite amount of feedstock."@en,
+        "Powder feedstock operations can typically include blending or mixing powders to the composition desired for the build cycle."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.8.3 a owl:Class ;
+    :astmDef "<In powder bed fusion> location in the machine where feedstock (3.6.6) is stored and from which a portion of the feedstock is repeatedly conveyed to the powder bed (3.8.5) during the build cycle (3.3.8)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.8.3"^^xsd:string ;
+    :astmNo "3.8.3"^^xsd:string ;
+    :prefLabel "FeedRegion"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.8.4 a owl:Class ;
+    :astmDef "<In powder bed fusion> location in the machine where excess powder is collected and stored after a layer has been deposited during a build cycle (3.3.8)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.8.4"^^xsd:string ;
+    :astmNo "3.8.4"^^xsd:string ;
+    :prefLabel "OverflowRegion"@en ;
+    rdfs:comment "For certain machine types, the overflow region can consist of one or more dedicated chambers or a powder recycling system."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.8.5 a owl:Class ;
+    :altLabel "PartBed"@en ;
+    :astmDef "Location in an additive manufacturing system (3.1.3) where feedstock (3.6.6) is deposited and selectively fused by means of a heat source or bonded by means of an adhesive to build up parts (3.9.1)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.8.5"^^xsd:string ;
+    :astmNo "3.8.5"^^xsd:string ;
+    :prefLabel "PowderBed"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.8.6 a owl:Class ;
+    :astmDef "Quantity of powder made by thoroughly intermingling powders originating from one or several powder lots (3.6.2) of the same nominal composition."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.8.6"^^xsd:string ;
+    :astmNo "3.8.6"^^xsd:string ;
+    :prefLabel "PowderBlend"@en ;
+    rdfs:comment "A common type of powder blend consists of a combination of virgin (3.6.4) powder and used powder (3.8.9). The specific requirements for a powder blend are typically determined by the application or by agreement between the supplier and end-user."@en,
+        "A distinction is made between blended powders and mixed powders, in which case blended powders are combinations of powders with nominally identical composition, whereas mixed powders are combinations of powders with different compositions."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.8.7 a owl:Class ;
+    :altLabel "PowderMixture"@en ;
+    :astmDef "Quantity of powder made by thoroughly intermingling powders of different nominal composition."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.8.7"^^xsd:string ;
+    :astmNo "3.8.7"^^xsd:string ;
+    :prefLabel "PowderMix"@en ;
+    rdfs:comment "A distinction is made between blended powders and mixed powders, in which case blended powders are combinations of powders with nominally identical composition, whereas mixed powders are combinations of powders with different compositions."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.8.8 a owl:Class ;
+    :astmDef "<In a powder bed fusion process that uses a heated build chamber> lightly bound powder surrounding the fabricated parts (3.9.1) at the end of a build cycle (3.3.8)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.8.8"^^xsd:string ;
+    :astmNo "3.8.8"^^xsd:string ;
+    :prefLabel "PartCake"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.8.9 a owl:Class ;
+    :astmDef "Powder that has been supplied as feedstock (3.6.6) to an AM machine (3.1.4) during at least one previous build cycle (3.3.8)."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.8.9"^^xsd:string ;
+    :astmNo "3.8.9"^^xsd:string ;
+    :prefLabel "UsedPowder"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.9.1 a owl:Class ;
+    :astmDef "Joined material forming a functional element that can constitute all or a section of an intended product."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.9.1"^^xsd:string ;
+    :astmNo "3.9.1"^^xsd:string ;
+    :prefLabel "Part"@en ;
+    rdfs:comment "The functional requirements for a part are typically determined by the intended application."@en ;
+    rdfs:subClassOf owl:Thing .
+
+:ASTM_3.9.2 a owl:Class ;
+    :altLabel "LatticeStructure"@en ;
+    :astmDef "Geometric arrangement composed of connective links between vertices (points) creating a functional structure."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.9.2"^^xsd:string ;
+    :astmNo "3.9.2"^^xsd:string ;
+    :prefLabel "Lattice"@en ;
+    rdfs:subClassOf owl:Thing .
+
+:altLabel a owl:AnnotationProperty .
+
+:astmDef a owl:AnnotationProperty ;
+    rdfs:comment "ASTM definition."^^xsd:string .
+
+:astmId a owl:AnnotationProperty ;
+    rdfs:comment "ASTM id."^^xsd:string .
+
+:astmNo a owl:AnnotationProperty ;
+    rdfs:comment "ASTM number."^^xsd:string .
+
+:prefLabel a owl:AnnotationProperty .
+
