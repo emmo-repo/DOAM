@@ -36,28 +36,88 @@ def fixdef(definition):
     return definition if definition.endswith(".") else f"{definition}."
 
 
+version = "v1"
 astm_iri = "http://iso.org/astm#"
 
 world = World()
+
+
+# Selected annotations from SKOS
+skos = world.get_ontology("http://www.w3.org/2004/02/skos/core#")
+with skos:
+    class prefLabel(owlready2.rdfs.label):
+        pass
+
+    class altLabel(owlready2.rdfs.label):
+        pass
+
+
+# Selected annotations from Dublin Core terms
+dcterms = world.get_ontology("http://purl.org/dc/terms/")
+with dcterms:
+    class title(owlready2.AnnotationProperty):
+        pass
+
+    class abstract(owlready2.AnnotationProperty):
+        pass
+
+    class creator(owlready2.AnnotationProperty):
+        pass
+
+    class publisher(owlready2.AnnotationProperty):
+        pass
+
+    class license(owlready2.AnnotationProperty):
+        pass
+
+
+# Create ASTM ontology
 astm = world.get_ontology(astm_iri)
 astm.base_iri = astm_iri
 
+headers = {
+    "3.1": "General terms",
+    "3.2": "Process categories",
+    "3.3": "Processing: general processing",
+    "3.4": "Processing: data",
+    "3.5": "Processing: positioning coordination and orientation",
+    "3.6": "Processing: material",
+    "3.7": "Processing: material extrusion",
+    "3.8": "Processing: powder bed fusion",
+    "3.9": "Parts: general parts",
+    "3.10": "Parts: applocations",
+    "3.11": "Parts: properties",
+    "3.12": "Parts: evaluation",
+}
+
 with astm:
-
-    class prefLabel(owlready2.AnnotationProperty):
-        iri = "http://www.w3.org/2004/02/skos/core#prefLabel"
-
-    class altLabel(owlready2.AnnotationProperty):
-        iri = "http://www.w3.org/2004/02/skos/core#altLabel"
-
     class astmNo(owlready2.AnnotationProperty):
-        comment = "ASTM number."
+        comment = ["ASTM number."]
 
     class astmId(owlready2.AnnotationProperty):
-        comment = "ASTM id."
+        comment = ["ASTM id."]
 
     class astmDef(owlready2.AnnotationProperty):
-        comment = "ASTM definition."
+        comment = ["ASTM definition."]
+
+    for headerno, header in headers.items():
+        if ":" in header:
+            topname, _ = header.split(":")
+            name = f"ASTM_{topname}"
+            if name not in astm:
+                TopHeader = types.new_class(name, (owlready2.Thing,))
+                TopHeader.prefLabel.append(en(fixtitle(topname)))
+
+    for headerno, header in headers.items():
+        if ":" in header:
+            topname, preflabel = header.split(":")
+            base = astm[f"ASTM_{topname}"]
+        else:
+            preflabel = header
+            base = owlready2.Thing
+        Header = types.new_class(f"ASTM_{headerno}", (base,))
+        Header.prefLabel.append(en(fixtitle(preflabel)))
+        Header.astmNo = headerno
 
 
     # Parse ASTM HTML file
@@ -77,7 +137,9 @@ with astm:
         notes = [" ".join(list(note.strings)[1:]) for note in term.find_all(
             "div", attrs={"class": "sts-tbx-note"})]
 
-        Term = types.new_class(f"ASTM_{termno}", (owlready2.Thing, ))
+        headerno = ".".join(termno.split(".")[:2])
+        Header = astm[f"ASTM_{headerno}"]
+        Term = types.new_class(f"ASTM_{termno}", (Header, ))
         Term.prefLabel.append(en(fixtitle(titles[0])))
         Term.altLabel.extend(en(fixtitle(title)) for title in titles[1:])
         Term.astmNo = termno
@@ -85,7 +147,43 @@ with astm:
         Term.astmDef = en(fixdef(definition))
         Term.comment.extend(en(fixdef(note)) for note in notes)
 
-#astm.metadata.title.append(en('xxx'))
 
-astm.set_version(version="v1", version_iri="http://iso.org/v1/astm#")
+astm.metadata.title.append(en(
+    'ISO/ASTM 52900:2021 Additive manufacturing - General principles - '
+    'Fundamentals and vocabulary'))
+astm.metadata.creator.append(en('Klas Boivie, SINTEF, NO'))
+astm.metadata.creator.append(en('Jesper Friis, SINTEF, NO'))
+astm.metadata.creator.append(en('Sylvain Gouttebroze, SINTEF, NO'))
+astm.metadata.publisher.append(en('ISO/ASTM'))
+astm.metadata.abstract.append(en("""
+Additive manufacturing (AM) is the general term for those technologies
+that successively join material to create physical objects as
+specified by 3D model data. These technologies are presently used for
+various applications in engineering industry as well as other areas of
+society, such as medicine, education, architecture, cartography, toys
+and entertainment.
+
+During the development of additive manufacturing technology, there
+have been numerous different terms and definitions in use, often with
+reference to specific application areas and trademarks. This is often
+ambiguous and confusing, which hampers communication and wider
+application of this technology.
+
+It is the intention of this document to provide a basic understanding
+of the fundamental principles for additive manufacturing processes,
+and based on this, to give clear definitions for terms and
+nomenclature associated with additive manufacturing technology. The
+objective of this standardization of terminology for additive
+manufacturing is to facilitate communication between people involved
+in this field of technology on a worldwide basis.
+"""))
+astm.metadata.license.append(en(
+    'https://creativecommons.org/licenses/by/4.0/legalcode'))
+astm.metadata.versionInfo.append(en(version))
+astm.metadata.comment.append(en(
+    'This ontology is generated from the ASTM 52900 standard published online '
+    'on https://www.iso.org/obp/ui/#iso:std:iso-astm:52900:ed-2:v1:en.'))
+
+astm.set_version(
+    version=version, version_iri=f"http://iso.org/{version}/astm#")
 astm.save(thisdir / "astm.ttl", format="turtle", overwrite=True)
