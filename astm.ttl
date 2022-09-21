@@ -34,7 +34,8 @@ in this field of technology on a worldwide basis.
     dcterms:license "https://creativecommons.org/licenses/by/4.0/legalcode"@en ;
     dcterms:publisher "ISO/ASTM"@en ;
     dcterms:title "ISO/ASTM 52900:2021 Additive manufacturing - General principles - Fundamentals and vocabulary"@en ;
-    rdfs:comment "This ontology is generated from the ASTM 52900 standard published online on https://www.iso.org/obp/ui/#iso:std:iso-astm:52900:ed-2:v1:en."@en ;
+    rdfs:comment "The CC-BY4.0 license applies to this document, not to the source from which it was generated"@en,
+        "This ontology is generated from the ASTM 52900 standard published online on https://www.iso.org/obp/ui/#iso:std:iso-astm:52900:ed-2:v1:en."@en ;
     owl:versionIRI <http://iso.org/v1/astm#> ;
     owl:versionInfo "v1"@en .
 
