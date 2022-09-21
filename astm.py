@@ -21,7 +21,12 @@ def fixtitle(title):
     """Fix ASTM title."""
     if title.endswith(",noun"):
         title = title[:-5]
-    return "".join(r if r.isupper() else r.title() for r in title.split(" "))
+    if title.endswith(",adjective"):
+        title = title[:-10]
+    if title.endswith(",participle"):
+        title = title[:-11]
+    title = "".join(r if r.isupper() else r.title() for r in title.split(" "))
+    return title.replace("-", "")
 
 
 def fixdef(definition):
@@ -92,13 +97,29 @@ headers = {
 
 with astm:
     class astmNo(owlready2.AnnotationProperty):
+        prefLabel = ["astmNo"]
         comment = ["ASTM number."]
 
     class astmId(owlready2.AnnotationProperty):
+        prefLabel = ["astmId"]
         comment = ["ASTM id."]
 
     class astmDef(owlready2.AnnotationProperty):
+        prefLabel = ["astmDef"]
         comment = ["ASTM definition."]
+
+    class ASTMType(owlready2.Thing):
+        prefLabel = ["ASTMType"]
+        comment = ["Type categorisation."]
+
+    class Noun(ASTMType):
+        prefLabel = ["Noun"]
+
+    class Adjective(ASTMType):
+        prefLabel = ["Adjective"]
+
+    class Participle(ASTMType):
+        prefLabel = ["Participle"]
 
     for headerno, header in headers.items():
         if ":" in header:
@@ -139,7 +160,17 @@ with astm:
 
         headerno = ".".join(termno.split(".")[:2])
         Header = astm[f"ASTM_{headerno}"]
-        Term = types.new_class(f"ASTM_{termno}", (Header, ))
+
+        if titles[0].endswith("noun"):
+            bases = (Header, Noun)
+        elif titles[0].endswith("adjective"):
+            bases = (Header, Adjective)
+        elif titles[0].endswith("participle"):
+            bases = (Header, Participle)
+        else:
+            bases = (Header,)
+
+        Term = types.new_class(f"ASTM_{termno}", bases)
         Term.prefLabel.append(en(fixtitle(titles[0])))
         Term.altLabel.extend(en(fixtitle(title)) for title in titles[1:])
         Term.astmNo = termno
