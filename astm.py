@@ -1,4 +1,5 @@
 #!/bin/env python
+import re
 import types
 from pathlib import Path
 
@@ -138,6 +139,9 @@ with astm:
     class astmDef(owlready2.rdfs.comment):
         """ASTM definition."""
 
+    class astmRef(owlready2.rdfs.seeAlso):
+        """A reference to another ASTM term."""
+
     class ASTMType(owlready2.Thing):
         """Categorisation according to grammatical category in linguistics."""
 
@@ -219,6 +223,9 @@ with astm:
         Term.astmId = termid
         Term.astmDef = en(fixdef(definition))
         Term.comment.extend(en(fixdef(note)) for note in notes)
+        Term.astmRef.extend(f"{astm_iri}ASTM_{ref}" for ref in re.findall(
+            r"\((\d+\.\d+\.\d+)\)", definition))
+
 
 # Add additional subclass relations
 for clsname, subclasses in subclassOf.items():
