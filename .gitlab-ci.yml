@@ -5,8 +5,8 @@
 # Container Scanning customization: https://docs.gitlab.com/ee/user/application_security/container_scanning/#customizing-the-container-scanning-settings
 # Note that environment variables can be set in several places
 # See https://docs.gitlab.com/ee/ci/variables/#cicd-variable-precedence
-
-#stages:
+#
+# stages:
 #  - build
 #  - test
 #  - deploy
@@ -21,13 +21,13 @@
 #  - incremental rollout 100%
 #  - performance
 #  - cleanup
+#
+# - python3 -m pip install -r requirements.txt
+# - python3 astm.py
 
-#- python3 -m pip install -r requirements.txt
-#- python3 astm.py
-
-stages:
-  - build
-  - test
+#stages:
+#  - build
+#  - test
 
 install-requirements:
   stage: build
