@@ -7,25 +7,31 @@
 # See https://docs.gitlab.com/ee/ci/variables/#cicd-variable-precedence
 
 stages:
-- build:
-    python3 -m pip install -r requirements.txt
-- test:
-    python3 astm.py
+  - build
+  - test
+#  - deploy
+#  - review
+#  - dast
+#  - staging
+#  - canary
+#  - production
+#  - incremental rollout 10%
+#  - incremental rollout 25%
+#  - incremental rollout 50%
+#  - incremental rollout 100%
+#  - performance
+#  - cleanup
 
-#- build
-#- test
-#- deploy
-#- review
-#- dast
-#- staging
-#- canary
-#- production
-#- incremental rollout 10%
-#- incremental rollout 25%
-#- incremental rollout 50%
-#- incremental rollout 100%
-#- performance
-#- cleanup
+install-requirements:
+  stage: build
+  script:
+    - python3 -m pip install -r requirements.txt
+
+run-test:
+  stage: test
+  script:
+    - python3 astm.py
+
 
 sast:
   stage: test
