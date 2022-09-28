@@ -9,6 +9,7 @@
 stages:
   - build
   - test
+
 #  - deploy
 #  - review
 #  - dast
@@ -25,12 +26,18 @@ stages:
 install-requirements:
   stage: build
   script:
-    - python3 -m pip install -r requirements.txt
+    - echo "building..."
 
-run-test:
+    #- python3 -m pip install -r requirements.txt
+
+test-astm-script:
   stage: test
   script:
-    - python3 astm.py
+    - echo "*** stage: $CI_JOB_STAGE"
+    - echo "*** test: $TEST"
+    - echo "*** greetings: $GREETINGS"
+
+    #- python3 astm.py
 
 
 sast:
