@@ -29,18 +29,18 @@
 #  - build
 #  - test
 
-install-requirements:
-  stage: build
-  script:
-    - echo "building..."
-
-
-test-astm-script:
-  stage: test
-  script:
-    - echo "*** stage: $CI_JOB_STAGE"
-    - echo "*** test: $TEST"
-    - echo "*** greetings: $GREETINGS"
+#install-requirements:
+#  stage: build
+#  script:
+#    - echo "building..."
+#
+#
+#test-astm-script:
+#  stage: test
+#  script:
+#    - echo "*** stage: $CI_JOB_STAGE"
+#    - echo "*** test: $TEST"
+#    - echo "*** greetings: $GREETINGS"
 
 sast:
   stage: test
