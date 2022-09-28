@@ -6,10 +6,9 @@
 # Note that environment variables can be set in several places
 # See https://docs.gitlab.com/ee/ci/variables/#cicd-variable-precedence
 
-stages:
-  - build
-  - test
-
+#stages:
+#  - build
+#  - test
 #  - deploy
 #  - review
 #  - dast
@@ -23,12 +22,18 @@ stages:
 #  - performance
 #  - cleanup
 
+#- python3 -m pip install -r requirements.txt
+#- python3 astm.py
+
+stages:
+  - build
+  - test
+
 install-requirements:
   stage: build
   script:
     - echo "building..."
 
-    #- python3 -m pip install -r requirements.txt
 
 test-astm-script:
   stage: test
@@ -36,9 +41,6 @@ test-astm-script:
     - echo "*** stage: $CI_JOB_STAGE"
     - echo "*** test: $TEST"
     - echo "*** greetings: $GREETINGS"
-
-    #- python3 astm.py
-
 
 sast:
   stage: test
