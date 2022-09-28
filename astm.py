@@ -64,14 +64,10 @@ def en(s):
 
 def fixtitle(title):
     """Fix ASTM title."""
-    if title.endswith(",noun"):
-        title = title[:-5]
-    if title.endswith(",verb"):
-        title = title[:-5]
-    if title.endswith(",adjective"):
-        title = title[:-10]
-    if title.endswith(",participle"):
-        title = title[:-11]
+    for type in "noun", "verb", "adjective", "participle":
+        if title.endswith(f",{type}"):
+            title = title[:-len(type)-1]
+            break
     title = "".join(r if r.isupper() else r.title() for r in title.split(" "))
     return title.replace("-", "")
 
