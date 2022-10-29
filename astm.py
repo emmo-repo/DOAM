@@ -464,7 +464,7 @@ astm.metadata.comment.append(en(
     'This ontology is generated from the ASTM 52900 standard published online '
     'on https://www.iso.org/obp/ui/#iso:std:iso-astm:52900:ed-2:v1:en.'))
 astm.metadata.comment.append(en(
-    'The CC-BY4.0 license applies to this document, not to the source from '
+    'The CC BY 4.0 license applies to this document, not to the source from '
     'which it was generated'))
 astm.metadata.license.append(en(
     'https://creativecommons.org/licenses/by/4.0/legalcode'))
