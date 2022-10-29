@@ -1,0 +1,20 @@
+@prefix : <http://iso.org/astm/amo#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+: a owl:Ontology ;
+    dcterms:abstract """
+"""@en ;
+    dcterms:creator "Jesper Friis, SINTEF, NO"@en,
+        "Klas Boivie, SINTEF, NO"@en,
+        "Sylvain Gouttebroze, SINTEF, NO"@en ;
+    dcterms:license "https://creativecommons.org/licenses/by/4.0/legalcode"@en ;
+    dcterms:publisher "SFI Manufacturing"@en ;
+    dcterms:title "Additive Manufacturing Ontology (AMO)"@en ;
+    owl:versionIRI <http://iso.org/astm/0.0.1/amo#> ;
+    owl:versionInfo "0.0.1"@en ;
+    owl:imports <http://emmo.info/emmo/1.0.0-beta4> ,
+                <http://iso.org/astm> .

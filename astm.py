@@ -10,33 +10,35 @@ import owlready2
 
 
 # Version of the ISO/ASTM standard (not direct accessable from html)
-version = "v1"
+# The final part after the point is the version of the generated ontology
+version = "2021v1.1"
 
 # Base iri prepended to all concepts in the generated ontology
-astm_iri = "http://iso.org/astm#"
+astm_iri = "http://iso.org/astm-52900#"
 
 # Header numbers, mapped to (header_name, header_documentation) tuples
 headers = {
     "3.1": ("General terms",
             "General terms related to additive manufacturing."),
     "3.2": ("Process categories",
-            "Categorisation according to AM processing technique."),
+            "Categorisation according to AM processing architecture."),
     "3.3": ("Processing: general processing",
             "General terms related to AM processing."),
-    "3.4": ("Processing: data",
-            "Software-related terms."),
-    "3.5": ("Processing: positioning coordination and orientation",
-            "Terms related to AM positioning, coordination and "
+    "3.4": ("Processing: DataTerms",
+            "Terms related to software and data handling."),
+    "3.5": ("Processing: positioning, coordinates and orientation",
+            "Terms related to AM positioning, coordinates and "
             "orientation."),
-    "3.6": ("Processing: material",
-            "Material-related terms for AM processing."),
+    "3.6": ("Processing: MaterialTerms",
+            "Terms related to material (including part material and feedstock) "
+            "in AM processing."),
     "3.7": ("Processing: material extrusion",
-            "Material-related terms for AM extrusion"),
+            "Terms related to material extrusion processes."),
     "3.8": ("Processing: powder bed fusion",
             "Terms related to powder bed fusion."),
     "3.9": ("Parts: general parts",
             "AM products categorised according to structure."),
-    "3.10": ("Parts: applocations",
+    "3.10": ("Parts: applications",
             "Categorisation according to application within AM."),
     "3.11": ("Parts: properties",
             "Part-related properties."),
@@ -54,6 +56,9 @@ topheaders = {
 # Additional rdfs:subClassOf relations
 subclassOf = {
     "3DPrinting": ["AdditiveManufacturing"],
+    "Filament": ["Feedstock"],
+    "Pellets": ["Feedstock"],
+    "Cure": ["Processing"],
 }
 
 
@@ -275,7 +280,7 @@ astm.metadata.license.append(en(
 astm.metadata.versionInfo.append(en(version))
 
 astm.set_version(
-    version=version, version_iri=f"http://iso.org/{version}/astm#")
+    version=version, version_iri=f"http://iso.org/astm/{version}#")
 
 # Save to file
 astm.save(thisdir / "astm.ttl", format="turtle", overwrite=True)
