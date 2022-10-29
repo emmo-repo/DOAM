@@ -481,7 +481,7 @@ astm.metadata.comment.append(en(
     'version of the ISO/ASTM standard followed by a point and the version '
     'of the generated ontology.'))
 astm.set_version(
-    version=version, version_iri=f"{base_iri[:-1]}/{version}#")
+    version=version, version_iri=f"{base_iri.rstrip('/#')}/{version}#")
 
 # Save to file
-astm.save(thisdir / "astm.ttl", format="turtle", overwrite=True)
+astm.save(thisdir / "astm52900.ttl", format="turtle", overwrite=True)
