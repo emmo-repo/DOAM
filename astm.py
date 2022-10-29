@@ -14,7 +14,8 @@ import owlready2
 version = "2021v1.1"
 
 # Base iri prepended to all concepts in the generated ontology
-astm_iri = "http://iso.org/astm-52900#"
+#base_iri = "http://iso.org/astm52900#"
+base_iri = "http://emmo.info/doam/astm52900#"
 
 # Header numbers, mapped to (header_name, header_documentation) tuples
 headers = {
@@ -257,13 +258,17 @@ with dcterms:
     class publisher(owlready2.AnnotationProperty):
         """An entity responsible for making the resource available."""
 
+    class rightsHolder(owlready2.AnnotationProperty):
+        """A person or organization owning or managing rights over the
+        resource."""
+
     class title(owlready2.AnnotationProperty):
         """A name given to the resource."""
 
 
 # Create ASTM ontology
-astm = world.get_ontology(astm_iri)
-astm.base_iri = astm_iri
+astm = world.get_ontology(base_iri)
+astm.base_iri = base_iri
 
 
 with astm:
@@ -418,7 +423,7 @@ with astm:
         Term.astmId = termid
         Term.astmDef = en(fixdef(definition))
         Term.comment.extend(en(fixdef(note)) for note in notes)
-        Term.astmRef.extend(f"{astm_iri}ASTM_{ref}" for ref in re.findall(
+        Term.astmRef.extend(f"{base_iri}ASTM_{ref}" for ref in re.findall(
             r"\((\d+\.\d+\.\d+)\)", definition))
 
     foreword = parsed.body.find(
@@ -452,7 +457,8 @@ astm.metadata.creator.append(en('Klas Boivie, SINTEF, NO'))
 astm.metadata.creator.append(en('Jesper Friis, SINTEF, NO'))
 astm.metadata.creator.append(en('Sylvain Gouttebroze, SINTEF, NO'))
 astm.metadata.creator.append(en('Even Wilberg Hovig, SINTEF, NO'))
-astm.metadata.publisher.append(en('ISO/ASTM'))
+astm.metadata.rightsHolder.append('SINTEF, NO')
+#astm.metadata.publisher.append(en('ISO/ASTM'))
 astm.metadata.astmForeword.append(en(foreword))
 astm.metadata.astmIntroduction.append(en(introduction))
 astm.metadata.astmScope.append(en(scope))
@@ -465,17 +471,17 @@ astm.metadata.comment.append(en(
     'on https://www.iso.org/obp/ui/#iso:std:iso-astm:52900:ed-2:v1:en.'))
 astm.metadata.comment.append(en(
     'The CC BY 4.0 license applies to this document, not to the source from '
-    'which it was generated'))
+    'which it was generated.'))
 astm.metadata.license.append(en(
     'https://creativecommons.org/licenses/by/4.0/legalcode'))
 astm.metadata.versionInfo.append(en(version))
 
 astm.metadata.comment.append(en(
-    """The version consists of two parts, first an identifier for the
-    version of the ISO/ASTM standard followed by a point and the version
-    of the generated ontology."""))
+    'The version consists of two parts, first an identifier for the '
+    'version of the ISO/ASTM standard followed by a point and the version '
+    'of the generated ontology.'))
 astm.set_version(
-    version=version, version_iri=f"http://iso.org/astm/{version}#")
+    version=version, version_iri=f"{base_iri[:-1]}/{version}#")
 
 # Save to file
 astm.save(thisdir / "astm.ttl", format="turtle", overwrite=True)
