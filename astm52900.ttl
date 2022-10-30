@@ -1355,17 +1355,14 @@
 
 :EquipmentPart a owl:Class ;
     rdfs:comment "A part of an equipment."@en ;
-    rdfs:subClassOf owl:Thing ;
     skos:prefLabel "EquipmentPart"@en .
 
 :GramaticalCategorisation a owl:Class ;
     rdfs:comment "Categorisation according to grammatical category in linguistics."@en ;
-    rdfs:subClassOf owl:Thing ;
     skos:prefLabel "GramaticalCategorisation"@en .
 
 :ThematicCategorisation a owl:Class ;
     rdfs:comment "Categorisation according to the sections in the ASTM standard."@en ;
-    rdfs:subClassOf owl:Thing ;
     skos:prefLabel "ThematicCategorisation"@en .
 
 :ASTM_3.12 a owl:Class ;
@@ -1390,7 +1387,6 @@ Typically a condition."""@en ;
     rdfs:comment """An item necessary for realising a particular purpose.
 
 -- Oxford Languages"""@en ;
-    rdfs:subClassOf owl:Thing ;
     skos:prefLabel "Equipment"@en .
 
 :ASTM_ProcessingRelated a owl:Class ;
@@ -1402,7 +1398,6 @@ Typically a condition."""@en ;
     rdfs:comment """An attribute, quality or characteristic of something.
 
 -- Oxford Languages"""@en ;
-    rdfs:subClassOf owl:Thing ;
     skos:prefLabel "Property"@en .
 
 :ASTM_3.2 a owl:Class ;
@@ -1415,7 +1410,6 @@ Typically a condition."""@en ;
 :Role a owl:Class ;
     :example "A person or a software."@en ;
     rdfs:comment "An actor's part in a process."@en ;
-    rdfs:subClassOf owl:Thing ;
     skos:prefLabel "Role"@en .
 
 :ASTM_3.11 a owl:Class ;
@@ -1453,7 +1447,6 @@ Typically a condition."""@en ;
     rdfs:comment """An object whose variation in properties are encoded by
 an agent and that can be decoded by another agent according to
 a specific rule."""@en ;
-    rdfs:subClassOf owl:Thing ;
     skos:prefLabel "Data"@en .
 
 :ASTM_3.3 a owl:Class ;
@@ -1466,7 +1459,6 @@ a specific rule."""@en ;
     rdfs:comment """A real world material representing an amount of a physical
 substance (or mixture of substances) in different states of
 matter or phases."""@en ;
-    rdfs:subClassOf owl:Thing ;
     skos:prefLabel "Material"@en .
 
 :ASTM_3.5 a owl:Class ;
@@ -1480,7 +1472,6 @@ matter or phases."""@en ;
 particular end.
 
 -- Oxford Languages"""@en ;
-    rdfs:subClassOf owl:Thing ;
     skos:prefLabel "Process"@en .
 
 :Geometrical a owl:Class ;

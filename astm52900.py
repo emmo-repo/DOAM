@@ -494,5 +494,11 @@ for p, o, d in astm._get_data_triples_s_pod(abbr_iri_old):
     astm._del_data_triple_spod(abbr_iri_old, p, o, d)
     astm._add_data_triple_spod(abbr_iri_new, p, o, d)
 
+# Remove explicit subclassing of owl:Thing
+for s, p, o in astm.get_triples(
+        p=owlready2.rdfs_subclassof, o=owlready2.owl_thing):
+    astm._del_obj_triple_spo(s, p, o)
+
+
 # Save to file
 astm.save(thisdir / "astm52900.ttl", format="turtle", overwrite=True)
