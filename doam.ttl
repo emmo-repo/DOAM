@@ -28,6 +28,22 @@
 #    Classes
 #################################################################
 
+###  http://emmo.info/doam/astm52900#ASTM_3.6.1
+astm:ASTM_3.6.1 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty [ owl:inverseOf emmo:EMMO_17e27c22_37e1_468c_9dd7_95e137f73e7f
+                                                 ] ;
+                                  owl:someValuesFrom astm:ASTM_3.6.5
+                                ] .
+
+
+###  http://emmo.info/doam/astm52900#ASTM_3.6.2
+astm:ASTM_3.6.2 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty [ owl:inverseOf emmo:EMMO_17e27c22_37e1_468c_9dd7_95e137f73e7f
+                                                 ] ;
+                                  owl:someValuesFrom astm:ASTM_3.6.5
+                                ] .
+
+
 ###  http://emmo.info/doam/astm52900#Data
 astm:Data rdfs:subClassOf emmo:EMMO_3e7add3d_e6ed_489a_a796_8e31fef9b490 .
 
@@ -38,7 +54,7 @@ astm:Equipment rdfs:subClassOf emmo:EMMO_494b372c_cfdf_47d3_a4de_5e037c540de8 .
 
 ###  http://emmo.info/doam/astm52900#EquipmentPart
 astm:EquipmentPart rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                     owl:onProperty [ owl:inverseOf emmo:EMMO_8e52c42b_e879_4473_9fa1_4b23428b392b
+                                     owl:onProperty [ owl:inverseOf emmo:EMMO_17e27c22_37e1_468c_9dd7_95e137f73e7f
                                                     ] ;
                                      owl:someValuesFrom astm:Equipment
                                    ] .

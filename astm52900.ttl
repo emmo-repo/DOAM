@@ -47,20 +47,6 @@
         :Process ;
     skos:prefLabel "SingleStepProcess"@en .
 
-:ASTM_3.1.2 a owl:Class ;
-    :astmDef "Process of joining materials to make parts (3.9.1) from 3D model data, usually layer (3.3.7) upon layer, as opposed to subtractive manufacturing and formative manufacturing methodologies."@en ;
-    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.1.2"^^xsd:string ;
-    :astmNo "3.1.2"^^xsd:string ;
-    :astmRef "http://emmo.info/doam/astm52900#ASTM_3.3.7"^^xsd:string,
-        "http://emmo.info/doam/astm52900#ASTM_3.9.1"^^xsd:string ;
-    rdfs:comment "Historical terms include: additive fabrication, additive processes, additive techniques, additive layer manufacturing, layer manufacturing, solid freeform fabrication and freeform fabrication."@en,
-        "The meaning of “additive-”, “subtractive-” and “formative-” manufacturing methodologies is further discussed in Annex B."@en ;
-    rdfs:subClassOf :ASTM_3.1,
-        :Noun,
-        :Process ;
-    skos:altLabel "AM"@en ;
-    skos:prefLabel "AdditiveManufacturing"@en .
-
 :ASTM_3.1.3 a owl:Class ;
     :astmDef "Machine and auxiliary equipment used for additive manufacturing (3.1.2)."@en ;
     :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.1.3"^^xsd:string ;
@@ -427,9 +413,9 @@
     :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.3.1"^^xsd:string ;
     :astmNo "3.3.1"^^xsd:string ;
     rdfs:comment "This term is often used in a non-technical context synonymously with additive manufacturing (3.1.2) and, in these cases, typically associated with machines used for non-industrial purposes including personal use."@en ;
-    rdfs:subClassOf :ASTM_3.3,
-        :Noun,
-        :Process ;
+    rdfs:subClassOf :ASTM_3.1.2,
+        :ASTM_3.3,
+        :Noun ;
     skos:prefLabel "3DPrinting"@en .
 
 :ASTM_3.3.10 a owl:Class ;
@@ -1278,6 +1264,20 @@
     rdfs:subPropertyOf rdfs:comment ;
     skos:prefLabel "example"@en .
 
+:ASTM_3.1.2 a owl:Class ;
+    :astmDef "Process of joining materials to make parts (3.9.1) from 3D model data, usually layer (3.3.7) upon layer, as opposed to subtractive manufacturing and formative manufacturing methodologies."@en ;
+    :astmId "iso_std_iso-astm_52900_ed-2_v1_en_term_3.1.2"^^xsd:string ;
+    :astmNo "3.1.2"^^xsd:string ;
+    :astmRef "http://emmo.info/doam/astm52900#ASTM_3.3.7"^^xsd:string,
+        "http://emmo.info/doam/astm52900#ASTM_3.9.1"^^xsd:string ;
+    rdfs:comment "Historical terms include: additive fabrication, additive processes, additive techniques, additive layer manufacturing, layer manufacturing, solid freeform fabrication and freeform fabrication."@en,
+        "The meaning of “additive-”, “subtractive-” and “formative-” manufacturing methodologies is further discussed in Annex B."@en ;
+    rdfs:subClassOf :ASTM_3.1,
+        :Noun,
+        :Process ;
+    skos:altLabel "AM"@en ;
+    skos:prefLabel "AdditiveManufacturing"@en .
+
 :Participle a owl:Class ;
     rdfs:comment "A verbal that expresses a state of an entity."@en ;
     rdfs:subClassOf :GramaticalCategorisation ;
@@ -1349,7 +1349,7 @@
     skos:prefLabel "PartApplicationRelated"@en .
 
 :ASTM_PartsRelated a owl:Class ;
-    :astmDef "The class of all terms  within additive manufaturing that are related to parts."@en ;
+    :astmDef "The superclass of all concepts within additive manufaturing that are related to parts."@en ;
     rdfs:subClassOf :ThematicCategorisation ;
     skos:prefLabel "PartsRelated"@en .
 
@@ -1366,13 +1366,13 @@
     skos:prefLabel "ThematicCategorisation"@en .
 
 :ASTM_3.12 a owl:Class ;
-    :astmDef "Terms related to evaluation of AM products."@en ;
+    :astmDef "Concepts related to evaluation of AM products."@en ;
     :astmNo "3.12"^^xsd:string ;
     rdfs:subClassOf :ASTM_PartsRelated ;
     skos:prefLabel "PartEvaluationRelated"@en .
 
 :ASTM_3.7 a owl:Class ;
-    :astmDef "Terms related to material extrusion processes."@en ;
+    :astmDef "Concepts related to material extrusion processes."@en ;
     :astmNo "3.7"^^xsd:string ;
     rdfs:subClassOf :ASTM_ProcessingRelated ;
     skos:prefLabel "MaterialExtrusionRelated"@en .
@@ -1390,7 +1390,7 @@ Typically a condition."""@en ;
     skos:prefLabel "Equipment"@en .
 
 :ASTM_ProcessingRelated a owl:Class ;
-    :astmDef "Terms related to AM processing."@en ;
+    :astmDef "Concepts related to AM processing."@en ;
     rdfs:subClassOf :ThematicCategorisation ;
     skos:prefLabel "ProcessingRelated"@en .
 
@@ -1425,19 +1425,19 @@ Typically a condition."""@en ;
     skos:prefLabel "GeneralConcepts"@en .
 
 :ASTM_3.6 a owl:Class ;
-    :astmDef "Terms related to material (including part material and feedstock) in AM processing."@en ;
+    :astmDef "Concepts related to material (including part material and feedstock) in AM processing."@en ;
     :astmNo "3.6"^^xsd:string ;
     rdfs:subClassOf :ASTM_ProcessingRelated ;
     skos:prefLabel "MaterialRelated"@en .
 
 :ASTM_3.8 a owl:Class ;
-    :astmDef "Terms related to powder bed fusion."@en ;
+    :astmDef "Concepts related to powder bed fusion."@en ;
     :astmNo "3.8"^^xsd:string ;
     rdfs:subClassOf :ASTM_ProcessingRelated ;
     skos:prefLabel "PowderBedFusionRelated"@en .
 
 :ASTM_3.4 a owl:Class ;
-    :astmDef "Terms related to software and data handling."@en ;
+    :astmDef "Concepts related to software and data handling."@en ;
     :astmNo "3.4"^^xsd:string ;
     rdfs:subClassOf :ASTM_ProcessingRelated ;
     skos:prefLabel "DataRelated"@en .
@@ -1461,18 +1461,18 @@ substance (or mixture of substances) in different states of
 matter or phases."""@en ;
     skos:prefLabel "Material"@en .
 
-:ASTM_3.5 a owl:Class ;
-    :astmDef "Terms related to AM positioning, coordinates and orientation."@en ;
-    :astmNo "3.5"^^xsd:string ;
-    rdfs:subClassOf :ASTM_ProcessingRelated ;
-    skos:prefLabel "PositioningCoordinatesAndOrientation"@en .
-
 :Process a owl:Class ;
     rdfs:comment """A series of actions or steps taken in order to achieve a
-particular end.
+particular end result.
 
 -- Oxford Languages"""@en ;
     skos:prefLabel "Process"@en .
+
+:ASTM_3.5 a owl:Class ;
+    :astmDef "Concepts related to AM positioning, coordinates and orientation."@en ;
+    :astmNo "3.5"^^xsd:string ;
+    rdfs:subClassOf :ASTM_ProcessingRelated ;
+    skos:prefLabel "PositioningCoordinatesAndOrientation"@en .
 
 :Geometrical a owl:Class ;
     rdfs:comment "A geometrical object, like a position, an area or a volume."@en ;

@@ -25,22 +25,22 @@ headers = {
     # Process categories
     "3.2": ("Process categories",
             "Categorisation according to AM processing architecture."),
-    # ProcessingRelated
+    # Processing-related
     "3.3": ("ProcessingRelated: general processing",
             "General concepts related to AM processing."),
     "3.4": ("ProcessingRelated: data related",
-            "Terms related to software and data handling."),
+            "Concepts related to software and data handling."),
     "3.5": ("ProcessingRelated: positioning coordinates and orientation",
-            "Terms related to AM positioning, coordinates and "
+            "Concepts related to AM positioning, coordinates and "
             "orientation."),
     "3.6": ("ProcessingRelated: material related",
-            "Terms related to material (including part material and feedstock) "
-            "in AM processing."),
+            "Concepts related to material (including part material and "
+            "feedstock) in AM processing."),
     "3.7": ("ProcessingRelated: material extrusion related",
-            "Terms related to material extrusion processes."),
+            "Concepts related to material extrusion processes."),
     "3.8": ("ProcessingRelated: powder bed fusion related",
-            "Terms related to powder bed fusion."),
-    # PartsRelated
+            "Concepts related to powder bed fusion."),
+    # Parts-related
     "3.9": ("PartsRelated: general parts",
             "AM products categorised according to structure."),
     "3.10": ("PartsRelated: part application related",
@@ -48,25 +48,18 @@ headers = {
     "3.11": ("PartsRelated: part property related",
             "Part-related properties."),
     "3.12": ("PartsRelated: part evaluation related",
-            "Terms related to evaluation of AM products."),
+            "Concepts related to evaluation of AM products."),
 }
 
 # Description of top-level headers (that cannot be derived from `headers`)
 topheaders = {
-    "ProcessingRelated": "Terms related to AM processing.",
-    "PartsRelated": "The class of all terms  within additive manufaturing "
-           "that are related to parts.",
+    "ProcessingRelated": "Concepts related to AM processing.",
+    "PartsRelated": "The superclass of all concepts within additive "
+    "manufaturing that are related to parts.",
 }
 
 # Additional rdfs:subClassOf relations
 subclassOf = {
-    #"GeneralConcepts": ["ThematicCategorisation"],
-    "3DPrinting": ["AdditiveManufacturing"],
-
-    "Filament": ["Feedstock"],
-    "Pellets": ["Feedstock"],
-    #"Cure": ["ProcessingRelated"],
-
     # 3.1 General terms
     "3DPrinter": ["Equipment"],
     "AdditiveManufacturing": ["Process"],
@@ -81,7 +74,7 @@ subclassOf = {
     # 3.2 Process categories
     "ProcessCategories": ["Process"],
     # 3.3 General processing
-    "3DPrinting": ["Process"],
+    "3DPrinting": ["AdditiveManufacturing"],
     "BuildChamber": ["EquipmentPart"],
     "BuildCycle": ["Process"],
     "BuildPlatform": ["Equipment"],
@@ -334,7 +327,7 @@ with astm:
 
     class Process(owlready2.Thing):
         """A series of actions or steps taken in order to achieve a
-        particular end.
+        particular end result.
 
         -- Oxford Languages
         """
