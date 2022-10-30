@@ -481,7 +481,18 @@ astm.metadata.comment.append(en(
     'version of the ISO/ASTM standard followed by a point and the version '
     'of the generated ontology.'))
 astm.set_version(
-    version=version, version_iri=f"{base_iri.rstrip('/#')}/{version}#")
+    version=version, version_iri=f"{base_iri.rstrip('/#')}/{version}")
+
+
+# Hack to remove trailing hash from ontology IRI
+abbr_iri_old = astm._abbreviate(base_iri)
+abbr_iri_new = astm._abbreviate(base_iri.rstrip('#/'))
+for p, o in astm._get_obj_triples_s_po(abbr_iri_old):
+    astm._del_obj_triple_spo(abbr_iri_old, p, o)
+    astm._add_obj_triple_spo(abbr_iri_new, p, o)
+for p, o, d in astm._get_data_triples_s_pod(abbr_iri_old):
+    astm._del_data_triple_spod(abbr_iri_old, p, o, d)
+    astm._add_data_triple_spod(abbr_iri_new, p, o, d)
 
 # Save to file
 astm.save(thisdir / "astm52900.ttl", format="turtle", overwrite=True)

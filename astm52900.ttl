@@ -1,27 +1,27 @@
 @prefix : <http://emmo.info/doam/astm52900#> .
-@prefix core: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix term: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-: a owl:Ontology ;
+<http://emmo.info/doam/astm52900> a owl:Ontology ;
     :astmForeword "ISO (the International Organization for Standardization) is a worldwide federation of national standards bodies (ISO member bodies). The work of preparing International Standards is normally carried out through ISO technical committees. Each member body interested in a subject for which a technical committee has been established has the right to be represented on that committee. International organizations, governmental and non-governmental, in liaison with ISO, also take part in the work. ISO collaborates closely with the International Electrotechnical Commission (IEC) on all matters of electrotechnical standardization."@en ;
     :astmIntroduction "Additive manufacturing (AM) is the general term for those technologies that successively join material to create physical objects as specified by 3D model data. These technologies are presently used for various applications in engineering industry as well as other areas of society, such as medicine, education, architecture, cartography, toys and entertainment."@en ;
     :astmScope "This document establishes and defines terms used in additive manufacturing (AM) technology, which applies the additive shaping principle and thereby builds physical three-dimensional (3D) geometries by successive addition of material."@en ;
-    term:conformsTo "IEC Electropedia: available at https://www.electropedia.org/"@en,
+    dcterms:conformsTo "IEC Electropedia: available at https://www.electropedia.org/"@en,
         "ISO Online browsing platform: available at https://www.iso.org/obp"@en ;
-    term:creator "Even Wilberg Hovig, SINTEF, NO"@en,
+    dcterms:creator "Even Wilberg Hovig, SINTEF, NO"@en,
         "Jesper Friis, SINTEF, NO"@en,
         "Klas Boivie, SINTEF, NO"@en,
         "Sylvain Gouttebroze, SINTEF, NO"@en ;
-    term:license "https://creativecommons.org/licenses/by/4.0/legalcode"@en ;
-    term:rightsHolder "SINTEF, NO"^^xsd:string ;
-    term:title "ISO/ASTM 52900:2021 Additive manufacturing - General principles - Fundamentals and vocabulary"@en ;
+    dcterms:license "https://creativecommons.org/licenses/by/4.0/legalcode"@en ;
+    dcterms:rightsHolder "SINTEF, NO"^^xsd:string ;
+    dcterms:title "ISO/ASTM 52900:2021 Additive manufacturing - General principles - Fundamentals and vocabulary"@en ;
     rdfs:comment "The CC BY 4.0 license applies to this document, not to the source from which it was generated."@en,
         "The version consists of two parts, first an identifier for the version of the ISO/ASTM standard followed by a point and the version of the generated ontology."@en,
         "This ontology is generated from the ASTM 52900 standard published online on https://www.iso.org/obp/ui/#iso:std:iso-astm:52900:ed-2:v1:en."@en ;
-    owl:versionIRI <http://emmo.info/doam/astm52900/2021v1.1#> ;
+    owl:versionIRI <http://emmo.info/doam/astm52900/2021v1.1> ;
     owl:versionInfo "2021v1.1"@en .
 
 :ASTM_3.1.1 a owl:Class ;
@@ -32,7 +32,7 @@
     rdfs:subClassOf :ASTM_3.1,
         :Equipment,
         :Noun ;
-    core:prefLabel "3DPrinter"@en .
+    skos:prefLabel "3DPrinter"@en .
 
 :ASTM_3.1.10 a owl:Class ;
     :astmDef "Type of additive manufacturing (3.1.2) process in which parts (3.9.1) are fabricated in a single operation where the basic geometric shape and basic material properties of the intended product are achieved simultaneously."@en ;
@@ -45,7 +45,7 @@
     rdfs:subClassOf :ASTM_3.1,
         :Noun,
         :Process ;
-    core:prefLabel "SingleStepProcess"@en .
+    skos:prefLabel "SingleStepProcess"@en .
 
 :ASTM_3.1.2 a owl:Class ;
     :astmDef "Process of joining materials to make parts (3.9.1) from 3D model data, usually layer (3.3.7) upon layer, as opposed to subtractive manufacturing and formative manufacturing methodologies."@en ;
@@ -58,8 +58,8 @@
     rdfs:subClassOf :ASTM_3.1,
         :Noun,
         :Process ;
-    core:altLabel "AM"@en ;
-    core:prefLabel "AdditiveManufacturing"@en .
+    skos:altLabel "AM"@en ;
+    skos:prefLabel "AdditiveManufacturing"@en .
 
 :ASTM_3.1.3 a owl:Class ;
     :astmDef "Machine and auxiliary equipment used for additive manufacturing (3.1.2)."@en ;
@@ -69,9 +69,9 @@
     rdfs:subClassOf :ASTM_3.1,
         :Equipment,
         :Noun ;
-    core:altLabel "AdditiveManufacturingEquipment"@en,
+    skos:altLabel "AdditiveManufacturingEquipment"@en,
         "AdditiveManufacturingSystem"@en ;
-    core:prefLabel "AdditiveSystem"@en .
+    skos:prefLabel "AdditiveSystem"@en .
 
 :ASTM_3.1.4 a owl:Class ;
     :astmDef "Section of the additive manufacturing system (3.1.3) including hardware, machine control software, required set-up software and peripheral accessories necessary to complete a build cycle (3.3.8) for producing parts (3.9.1)."@en ;
@@ -83,7 +83,7 @@
     rdfs:subClassOf :ASTM_3.1,
         :Equipment,
         :Noun ;
-    core:prefLabel "AMMachine"@en .
+    skos:prefLabel "AMMachine"@en .
 
 :ASTM_3.1.5 a owl:Class ;
     :astmDef "Operator of or entity using an AM machine (3.1.4)."@en ;
@@ -93,7 +93,7 @@
     rdfs:subClassOf :ASTM_3.1,
         :Noun,
         :Role ;
-    core:prefLabel "AMMachineUser"@en .
+    skos:prefLabel "AMMachineUser"@en .
 
 :ASTM_3.1.6 a owl:Class ;
     :astmDef "Operator of or entity using an entire additive manufacturing system (3.1.3) or any component of an additive system (3.1.3)."@en ;
@@ -103,8 +103,8 @@
     rdfs:subClassOf :ASTM_3.1,
         :Noun,
         :Role ;
-    core:altLabel "AdditiveSystemUser"@en ;
-    core:prefLabel "AMSystemUser"@en .
+    skos:altLabel "AdditiveSystemUser"@en ;
+    skos:prefLabel "AMSystemUser"@en .
 
 :ASTM_3.1.7 a owl:Class ;
     :astmDef "<Of a machine; unless otherwise designated by the machine builder> side of the machine that the operator faces to access the user interface, or primary viewing window, or both."@en ;
@@ -113,7 +113,7 @@
     rdfs:subClassOf :ASTM_3.1,
         :EquipmentPart,
         :Noun ;
-    core:prefLabel "Front"@en .
+    skos:prefLabel "Front"@en .
 
 :ASTM_3.1.8 a owl:Class ;
     :astmDef "Provider of material/feedstock (3.6.6) to be processed in an additive manufacturing system (3.1.3)."@en ;
@@ -124,7 +124,7 @@
     rdfs:subClassOf :ASTM_3.1,
         :Noun,
         :Role ;
-    core:prefLabel "MaterialSupplier"@en .
+    skos:prefLabel "MaterialSupplier"@en .
 
 :ASTM_3.1.9 a owl:Class ;
     :astmDef "Type of additive manufacturing (3.1.2) process in which parts (3.9.1) are fabricated in two or more operations where the first typically provides the basic geometric shape and the following consolidates the part to the fundamental properties of the intended material."@en ;
@@ -138,7 +138,7 @@
     rdfs:subClassOf :ASTM_3.1,
         :Noun,
         :Process ;
-    core:prefLabel "MultiStepProcess"@en .
+    skos:prefLabel "MultiStepProcess"@en .
 
 :ASTM_3.10.1 a owl:Class ;
     :astmDef "Physical representation of all or a component of a product that, although limited in some way, can be used for analysis, design and evaluation."@en ;
@@ -148,7 +148,7 @@
     rdfs:subClassOf :ASTM_3.10,
         :Material,
         :Noun ;
-    core:prefLabel "Prototype"@en .
+    skos:prefLabel "Prototype"@en .
 
 :ASTM_3.10.2 a owl:Class ;
     :astmDef "Set of moulds, dies and other devices used for prototyping purposes."@en ;
@@ -159,7 +159,7 @@
     rdfs:subClassOf :ASTM_3.10,
         :Equipment,
         :Noun ;
-    core:prefLabel "PrototypeTooling"@en .
+    skos:prefLabel "PrototypeTooling"@en .
 
 :ASTM_3.10.3 a owl:Class ;
     :astmDef "<In additive manufacturing> application of additive manufacturing (3.1.2) intended for reducing the time needed for producing prototypes (3.10.1)."@en ;
@@ -171,7 +171,7 @@
     rdfs:subClassOf :ASTM_3.10,
         :Noun,
         :Process ;
-    core:prefLabel "RapidPrototyping"@en .
+    skos:prefLabel "RapidPrototyping"@en .
 
 :ASTM_3.10.4 a owl:Class ;
     :astmDef "<In additive manufacturing> application of additive manufacturing (3.1.2) intended for the production of tools or tooling components with reduced lead times as compared to conventional tooling manufacturing."@en ;
@@ -183,7 +183,7 @@
     rdfs:subClassOf :ASTM_3.10,
         :Noun,
         :Process ;
-    core:prefLabel "RapidTooling"@en .
+    skos:prefLabel "RapidTooling"@en .
 
 :ASTM_3.11.1 a owl:Class ;
     :astmDef "Closeness of agreement between a measured result and an accepted reference value."@en ;
@@ -194,7 +194,7 @@
     rdfs:subClassOf :ASTM_3.11,
         :Noun,
         :Property ;
-    core:prefLabel "Accuracy"@en .
+    skos:prefLabel "Accuracy"@en .
 
 :ASTM_3.11.2 a owl:Class ;
     :astmDef "<Build process> closeness of agreement between the results obtained on multiple parts under prescribed conditions."@en ;
@@ -205,7 +205,7 @@
     rdfs:subClassOf :ASTM_3.11,
         :Noun,
         :Property ;
-    core:prefLabel "Precision"@en .
+    skos:prefLabel "Precision"@en .
 
 :ASTM_3.11.3 a owl:Class ;
     :astmDef "Dimensions of the smallest part feature that can controllably be built."@en ;
@@ -217,7 +217,7 @@
     rdfs:subClassOf :ASTM_3.11,
         :Noun,
         :Property ;
-    core:prefLabel "Resolution"@en .
+    skos:prefLabel "Resolution"@en .
 
 :ASTM_3.11.4 a owl:Class ;
     :astmDef "State of parts (3.9.1) made by an additive process before any post-processing (3.6.10), besides, if necessary, the removal from a build platform (3.3.5) as well as the removal of support (3.3.9) and/or unprocessed feedstock (3.6.6)."@en ;
@@ -232,7 +232,7 @@
     rdfs:subClassOf :ASTM_3.11,
         :Adjective,
         :Material ;
-    core:prefLabel "AsBuilt"@en .
+    skos:prefLabel "AsBuilt"@en .
 
 :ASTM_3.11.5 a owl:Class ;
     :astmDef "State representing the part (3.9.1) to be built by an additive process in digital form, typically as 3D model data."@en ;
@@ -243,7 +243,7 @@
     rdfs:subClassOf :ASTM_3.11,
         :Adjective,
         :Data ;
-    core:prefLabel "AsDesigned"@en .
+    skos:prefLabel "AsDesigned"@en .
 
 :ASTM_3.11.6 a owl:Class ;
     :astmDef "State in which the material of the fabricated part is without significant content of voids."@en ;
@@ -254,7 +254,7 @@
     rdfs:subClassOf :ASTM_3.11,
         :Adjective,
         :Material ;
-    core:prefLabel "FullyDense"@en .
+    skos:prefLabel "FullyDense"@en .
 
 :ASTM_3.11.7 a owl:Class ;
     :astmDef "Condition where the components require little post-processing (3.6.10) to meet dimensional tolerance."@en ;
@@ -264,7 +264,7 @@
     rdfs:subClassOf :ASTM_3.11,
         :Adjective,
         :Material ;
-    core:prefLabel "NearNetShape"@en .
+    skos:prefLabel "NearNetShape"@en .
 
 :ASTM_3.11.8 a owl:Class ;
     :astmDef "<Property> presence of small voids in a part (3.9.1) making it less than fully dense (3.11.6)."@en ;
@@ -276,7 +276,7 @@
     rdfs:subClassOf :ASTM_3.11,
         :Noun,
         :Property ;
-    core:prefLabel "Porosity"@en .
+    skos:prefLabel "Porosity"@en .
 
 :ASTM_3.11.9 a owl:Class ;
     :astmDef "Degree of alignment of two or more measurements of the same property using the same equipment and in the same environment."@en ;
@@ -286,7 +286,7 @@
     rdfs:subClassOf :ASTM_3.11,
         :Noun,
         :Property ;
-    core:prefLabel "Repeatability"@en .
+    skos:prefLabel "Repeatability"@en .
 
 :ASTM_3.12.1 a owl:Class ;
     :astmDef "Set of instructions specifying the process of verification including appropriate resources and sequence of inspections to be referenced by the manufacturing plan (3.3.13)."@en ;
@@ -296,7 +296,7 @@
     rdfs:subClassOf :ASTM_3.12,
         :Data,
         :Noun ;
-    core:prefLabel "InspectionPlan"@en .
+    skos:prefLabel "InspectionPlan"@en .
 
 :ASTM_3.12.2 a owl:Class ;
     :astmDef "Part (3.9.1) submitted for testing and evaluation for conformance with specified requirements stipulated by a purchase order or otherwise before or in the initial stages of production."@en ;
@@ -306,8 +306,8 @@
     rdfs:subClassOf :ASTM_3.12,
         :ASTM_3.9.1,
         :Noun ;
-    core:altLabel "FirstProductionPart"@en ;
-    core:prefLabel "FirstArticle"@en .
+    skos:altLabel "FirstProductionPart"@en ;
+    skos:prefLabel "FirstArticle"@en .
 
 :ASTM_3.12.3 a owl:Class ;
     :astmDef "Part (3.9.1) with characteristics similar to the desired final part(s) which may have different geometry, scale or features that can be easily measured or characterized."@en ;
@@ -318,7 +318,7 @@
     rdfs:subClassOf :ASTM_3.12,
         :ASTM_3.9.1,
         :Noun ;
-    core:prefLabel "ReferencePart"@en .
+    skos:prefLabel "ReferencePart"@en .
 
 :ASTM_3.12.4 a owl:Class ;
     :astmDef "Process of verification of manufactured parts (3.9.1) prior to shipment in order to confirm the fulfilment of the requirements stipulated by a purchase order or otherwise."@en ;
@@ -328,8 +328,8 @@
     rdfs:subClassOf :ASTM_3.12,
         :Noun,
         :Process ;
-    core:altLabel "PreShipmentInspection"@en ;
-    core:prefLabel "FinalInspection"@en .
+    skos:altLabel "PreShipmentInspection"@en ;
+    skos:prefLabel "FinalInspection"@en .
 
 :ASTM_3.12.5 a owl:Class ;
     :astmDef "Process of demonstrating whether an entity is capable of fulfilling specified requirements."@en ;
@@ -339,7 +339,7 @@
     rdfs:subClassOf :ASTM_3.12,
         :Noun,
         :Process ;
-    core:prefLabel "Qualification"@en .
+    skos:prefLabel "Qualification"@en .
 
 :ASTM_3.2.1 a owl:Class ;
     :astmDef "Additive manufacturing (3.1.2) process in which a liquid bonding agent is selectively deposited to join powder materials."@en ;
@@ -349,8 +349,8 @@
     rdfs:comment "Identification of different binder jetting processes shall be consistent with the method described in Annex A."@en ;
     rdfs:subClassOf :ASTM_3.2,
         :Noun ;
-    core:altLabel "BJT"@en ;
-    core:prefLabel "BinderJetting"@en .
+    skos:altLabel "BJT"@en ;
+    skos:prefLabel "BinderJetting"@en .
 
 :ASTM_3.2.2 a owl:Class ;
     :astmDef "Additive manufacturing (3.1.2) process in which focused thermal energy is used to fuse materials by melting as they are being deposited."@en ;
@@ -361,8 +361,8 @@
         "“Focused thermal energy” means that an energy source (for example laser, electron beam or plasma arc) is focused to melt the materials being deposited."@en ;
     rdfs:subClassOf :ASTM_3.2,
         :Noun ;
-    core:altLabel "DED"@en ;
-    core:prefLabel "DirectedEnergyDeposition"@en .
+    skos:altLabel "DED"@en ;
+    skos:prefLabel "DirectedEnergyDeposition"@en .
 
 :ASTM_3.2.3 a owl:Class ;
     :astmDef "Additive manufacturing (3.1.2) process in which material is selectively dispensed through a nozzle or orifice."@en ;
@@ -372,8 +372,8 @@
     rdfs:comment "Identification of different material extrusion processes shall be consistent with the method described in Annex A."@en ;
     rdfs:subClassOf :ASTM_3.2,
         :Noun ;
-    core:altLabel "MEX"@en ;
-    core:prefLabel "MaterialExtrusion"@en .
+    skos:altLabel "MEX"@en ;
+    skos:prefLabel "MaterialExtrusion"@en .
 
 :ASTM_3.2.4 a owl:Class ;
     :astmDef "Additive manufacturing (3.1.2) process in which droplets of feedstock material are selectively deposited."@en ;
@@ -384,8 +384,8 @@
         "Identification of different material jetting processes shall be consistent with the method described in Annex A."@en ;
     rdfs:subClassOf :ASTM_3.2,
         :Noun ;
-    core:altLabel "MJT"@en ;
-    core:prefLabel "MaterialJetting"@en .
+    skos:altLabel "MJT"@en ;
+    skos:prefLabel "MaterialJetting"@en .
 
 :ASTM_3.2.5 a owl:Class ;
     :astmDef "Additive manufacturing (3.1.2) process in which thermal energy selectively fuses regions of a powder bed (3.8.5)."@en ;
@@ -396,8 +396,8 @@
     rdfs:comment "Identification of different powder bed fusion processes shall be consistent with the method described in Annex A."@en ;
     rdfs:subClassOf :ASTM_3.2,
         :Noun ;
-    core:altLabel "PBF"@en ;
-    core:prefLabel "PowderBedFusion"@en .
+    skos:altLabel "PBF"@en ;
+    skos:prefLabel "PowderBedFusion"@en .
 
 :ASTM_3.2.6 a owl:Class ;
     :astmDef "Additive manufacturing (3.1.2) process in which sheets of material are bonded to form a part (3.9.1)."@en ;
@@ -408,8 +408,8 @@
     rdfs:comment "Identification of different sheet lamination processes shall be consistent with the method described in Annex A."@en ;
     rdfs:subClassOf :ASTM_3.2,
         :Noun ;
-    core:altLabel "SHL"@en ;
-    core:prefLabel "SheetLamination"@en .
+    skos:altLabel "SHL"@en ;
+    skos:prefLabel "SheetLamination"@en .
 
 :ASTM_3.2.7 a owl:Class ;
     :astmDef "Additive manufacturing (3.1.2) process in which liquid photopolymer in a vat is selectively cured by light-activated polymerization."@en ;
@@ -419,8 +419,8 @@
     rdfs:comment "Identification of different vat photopolymerization processes shall be consistent with the method described in Annex A."@en ;
     rdfs:subClassOf :ASTM_3.2,
         :Noun ;
-    core:altLabel "VPP"@en ;
-    core:prefLabel "VatPhotopolymerization"@en .
+    skos:altLabel "VPP"@en ;
+    skos:prefLabel "VatPhotopolymerization"@en .
 
 :ASTM_3.3.1 a owl:Class ;
     :astmDef "Fabrication of objects through the deposition of a material using a print head, nozzle or another printer technology."@en ;
@@ -430,7 +430,7 @@
     rdfs:subClassOf :ASTM_3.3,
         :Noun,
         :Process ;
-    core:prefLabel "3DPrinting"@en .
+    skos:prefLabel "3DPrinting"@en .
 
 :ASTM_3.3.10 a owl:Class ;
     :astmDef "Operating parameters and system settings used during a build cycle (3.3.8)."@en ;
@@ -440,7 +440,7 @@
     rdfs:subClassOf :ASTM_3.3,
         :Data,
         :Noun ;
-    core:prefLabel "ProcessParameters"@en .
+    skos:prefLabel "ProcessParameters"@en .
 
 :ASTM_3.3.11 a owl:Class ;
     :astmDef "Configuration of the additive manufacturing system (3.1.3) for a build cycle."@en ;
@@ -450,7 +450,7 @@
     rdfs:subClassOf :ASTM_3.3,
         :Data,
         :Noun ;
-    core:prefLabel "SystemSetUp"@en .
+    skos:prefLabel "SystemSetUp"@en .
 
 :ASTM_3.3.12 a owl:Class ;
     :astmDef "Set of manufactured parts (3.9.1) having commonality between feedstock (3.6.6), production run (3.3.14), additive manufacturing system (3.1.3) and post-processing (3.6.10) steps (if required) as recorded on a single manufacturing work order."@en ;
@@ -465,7 +465,7 @@
     rdfs:subClassOf :ASTM_3.3,
         :Material,
         :Noun ;
-    core:prefLabel "ManufacturingLot"@en .
+    skos:prefLabel "ManufacturingLot"@en .
 
 :ASTM_3.3.13 a owl:Class ;
     :astmDef "Document setting out the specific manufacturing practices, technical resources and sequences of activities relevant to the production of a particular product including any specified acceptance criteria at each stage."@en ;
@@ -476,7 +476,7 @@
     rdfs:subClassOf :ASTM_3.3,
         :Data,
         :Noun ;
-    core:prefLabel "ManufacturingPlan"@en .
+    skos:prefLabel "ManufacturingPlan"@en .
 
 :ASTM_3.3.14 a owl:Class ;
     :astmDef "Set of all parts (3.9.1) produced in one build cycle (3.3.8) or sequential series of build cycles using the same feedstock (3.6.6) batch and process conditions."@en ;
@@ -488,7 +488,7 @@
     rdfs:subClassOf :ASTM_3.3,
         :Material,
         :Noun ;
-    core:prefLabel "ProductionRun"@en .
+    skos:prefLabel "ProductionRun"@en .
 
 :ASTM_3.3.15 a owl:Class ;
     :astmDef "Sequence of operations necessary for the part (3.9.1) to achieve desired functionality and properties."@en ;
@@ -498,7 +498,7 @@
     rdfs:subClassOf :ASTM_3.3,
         :Noun,
         :Process ;
-    core:prefLabel "ProcessChain"@en .
+    skos:prefLabel "ProcessChain"@en .
 
 :ASTM_3.3.2 a owl:Class ;
     :astmDef "Enclosed location within the additive manufacturing system (3.1.3) where the parts (3.9.1) are fabricated."@en ;
@@ -509,7 +509,7 @@
     rdfs:subClassOf :ASTM_3.3,
         :EquipmentPart,
         :Noun ;
-    core:prefLabel "BuildChamber"@en .
+    skos:prefLabel "BuildChamber"@en .
 
 :ASTM_3.3.3 a owl:Class ;
     :astmDef "Location where it is possible for parts (3.9.1) to be fabricated, typically within the build chamber (3.3.2) or on a build platform (3.3.5)."@en ;
@@ -521,7 +521,7 @@
     rdfs:subClassOf :ASTM_3.3,
         :Geometrical,
         :Noun ;
-    core:prefLabel "BuildSpace"@en .
+    skos:prefLabel "BuildSpace"@en .
 
 :ASTM_3.3.4 a owl:Class ;
     :astmDef "Total usable volume available in the machine for building parts (3.9.1)."@en ;
@@ -531,7 +531,7 @@
     rdfs:subClassOf :ASTM_3.3,
         :Geometrical,
         :Noun ;
-    core:prefLabel "BuildVolume"@en .
+    skos:prefLabel "BuildVolume"@en .
 
 :ASTM_3.3.5 a owl:Class ;
     :astmDef "<Of a machine> base which provides a surface upon which the building of the parts (3.9.1) is started and supported throughout the build process."@en ;
@@ -542,7 +542,7 @@
     rdfs:subClassOf :ASTM_3.3,
         :Equipment,
         :Noun ;
-    core:prefLabel "BuildPlatform"@en .
+    skos:prefLabel "BuildPlatform"@en .
 
 :ASTM_3.3.6 a owl:Class ;
     :astmDef "Area where material is added, normally on the last deposited layer (3.3.7), which becomes the foundation upon which the next layer is formed."@en ;
@@ -555,7 +555,7 @@
     rdfs:subClassOf :ASTM_3.3,
         :Geometrical,
         :Noun ;
-    core:prefLabel "BuildSurface"@en .
+    skos:prefLabel "BuildSurface"@en .
 
 :ASTM_3.3.7 a owl:Class ;
     :astmDef "<Matter> material laid out, or spread, to create a surface."@en ;
@@ -564,7 +564,7 @@
     rdfs:subClassOf :ASTM_3.3,
         :Material,
         :Noun ;
-    core:prefLabel "Layer"@en .
+    skos:prefLabel "Layer"@en .
 
 :ASTM_3.3.8 a owl:Class ;
     :astmDef "Single process cycle in which one or more components are built by successive joining of material within the build space (3.3.3) of the additive manufacturing system (3.1.3)."@en ;
@@ -575,7 +575,7 @@
     rdfs:subClassOf :ASTM_3.3,
         :Noun,
         :Process ;
-    core:prefLabel "BuildCycle"@en .
+    skos:prefLabel "BuildCycle"@en .
 
 :ASTM_3.3.9 a owl:Class ;
     :astmDef "Structure separate from the part (3.9.1) geometry that is created to provide a base and anchor for the part during the building process."@en ;
@@ -588,7 +588,7 @@
     rdfs:subClassOf :ASTM_3.3,
         :Material,
         :Noun ;
-    core:prefLabel "Support"@en .
+    skos:prefLabel "Support"@en .
 
 :ASTM_3.4.1 a owl:Class ;
     :astmDef "File format for communicating additive manufacturing (3.1.2) model data including a description of the 3D surface geometry with native support for colour, materials, lattices, textures, constellations and metadata."@en ;
@@ -599,8 +599,8 @@
     rdfs:subClassOf :ASTM_3.4,
         :Data,
         :Noun ;
-    core:altLabel "AMF"@en ;
-    core:prefLabel "AdditiveManufacturingFileFormat"@en .
+    skos:altLabel "AMF"@en ;
+    skos:prefLabel "AdditiveManufacturingFileFormat"@en .
 
 :ASTM_3.4.10 a owl:Class ;
     :astmDef "Information unit within an XML[10] document consisting of a start tag, an end tag, the content between the tags and any attributes (3.4.8)."@en ;
@@ -611,7 +611,7 @@
     rdfs:subClassOf :ASTM_3.4,
         :Data,
         :Noun ;
-    core:prefLabel "Element"@en .
+    skos:prefLabel "Element"@en .
 
 :ASTM_3.4.11 a owl:Class ;
     :astmDef "Three- or four-sided polygon that represents an element of a 3D polygonal mesh surface or model."@en ;
@@ -621,7 +621,7 @@
     rdfs:subClassOf :ASTM_3.4,
         :Geometrical,
         :Noun ;
-    core:prefLabel "Facet"@en .
+    skos:prefLabel "Facet"@en .
 
 :ASTM_3.4.12 a owl:Class ;
     :astmDef "Mathematical or digital representation of an object as a set of planar or curved surfaces, or both, that can, but does not necessarily have to represent a closed volume."@en ;
@@ -630,7 +630,7 @@
     rdfs:subClassOf :ASTM_3.4,
         :Data,
         :Noun ;
-    core:prefLabel "SurfaceModel"@en .
+    skos:prefLabel "SurfaceModel"@en .
 
 :ASTM_3.4.13 a owl:Class ;
     :astmDef "Method of acquiring the shape and size of an object as a 3-dimensional representation by recording x, y, z coordinates on the object’s surface and through software converting the collection of points into digital data."@en ;
@@ -641,8 +641,8 @@
     rdfs:subClassOf :ASTM_3.4,
         :Noun,
         :Process ;
-    core:altLabel "3DDigitizing"@en ;
-    core:prefLabel "3DScanning"@en .
+    skos:altLabel "3DDigitizing"@en ;
+    skos:prefLabel "3DScanning"@en .
 
 :ASTM_3.4.2 a owl:Class ;
     :astmDef "Software reading (parsing) the AMF (3.4.1) file for fabrication, visualization or analysis."@en ;
@@ -653,7 +653,7 @@
     rdfs:subClassOf :ASTM_3.4,
         :Noun,
         :Role ;
-    core:prefLabel "AMFConsumer"@en .
+    skos:prefLabel "AMFConsumer"@en .
 
 :ASTM_3.4.3 a owl:Class ;
     :astmDef "Software reading and rewriting the AMF (3.4.1) file for conversion."@en ;
@@ -664,7 +664,7 @@
     rdfs:subClassOf :ASTM_3.4,
         :Noun,
         :Role ;
-    core:prefLabel "AMFEditor"@en .
+    skos:prefLabel "AMFEditor"@en .
 
 :ASTM_3.4.4 a owl:Class ;
     :astmDef "Software writing (generating) the AMF (3.4.1) file from original geometric data."@en ;
@@ -675,7 +675,7 @@
     rdfs:subClassOf :ASTM_3.4,
         :Noun,
         :Role ;
-    core:prefLabel "AMFProducer"@en .
+    skos:prefLabel "AMFProducer"@en .
 
 :ASTM_3.4.5 a owl:Class ;
     :astmDef "Standard for the exchange of product model data."@en ;
@@ -686,7 +686,7 @@
     rdfs:subClassOf :ASTM_3.4,
         :Data,
         :Noun ;
-    core:prefLabel "STEP"@en .
+    skos:prefLabel "STEP"@en .
 
 :ASTM_3.4.6 a owl:Class ;
     :astmDef "File format for model data describing the surface geometry of an object as a tessellation of triangles used to communicate 3D geometries to machines in order to build physical parts (3.9.1)."@en ;
@@ -697,7 +697,7 @@
     rdfs:subClassOf :ASTM_3.4,
         :Data,
         :Noun ;
-    core:prefLabel "STL"@en .
+    skos:prefLabel "STL"@en .
 
 :ASTM_3.4.7 a owl:Class ;
     :astmDef "Data exchange specification using STEP (3.4.5)."@en ;
@@ -708,8 +708,8 @@
     rdfs:subClassOf :ASTM_3.4,
         :Data,
         :Noun ;
-    core:altLabel "ProductDataExchangeSpecification"@en ;
-    core:prefLabel "PDES"@en .
+    skos:altLabel "ProductDataExchangeSpecification"@en ;
+    skos:prefLabel "PDES"@en .
 
 :ASTM_3.4.8 a owl:Class ;
     :astmDef "<Data> characteristic representing one or more aspects, descriptors or elements of the data."@en ;
@@ -720,7 +720,7 @@
     rdfs:subClassOf :ASTM_3.4,
         :Data,
         :Noun ;
-    core:prefLabel "Attribute"@en .
+    skos:prefLabel "Attribute"@en .
 
 :ASTM_3.4.9 a owl:Class ;
     :astmDef "<Data> remark in source code which does not affect the behaviour of the program."@en ;
@@ -731,7 +731,7 @@
     rdfs:subClassOf :ASTM_3.4,
         :Data,
         :Noun ;
-    core:prefLabel "Comment"@en .
+    skos:prefLabel "Comment"@en .
 
 :ASTM_3.5.10 a owl:Class ;
     :astmDef "Situation when parts (3.9.1) are made in one build cycle (3.3.8) and are located such that their bounding boxes (3.5.1), arbitrarily oriented (3.5.2) or otherwise, overlap."@en ;
@@ -743,7 +743,7 @@
         "http://emmo.info/doam/astm52900#ASTM_3.9.1"^^xsd:string ;
     rdfs:subClassOf :ASTM_3.5,
         :Participle ;
-    core:prefLabel "Nesting"@en .
+    skos:prefLabel "Nesting"@en .
 
 :ASTM_3.5.11 a owl:Class ;
     :astmDef "Three-Dimensional coordinate system as defined by a fixed point on the build platform (3.3.5), with the three principal axes labelled x-axis (3.5.16), y-axis (3.5.17) and z-axis (3.5.18) with rotary axis about each of these axes labelled A, B and C, respectively, where the angles between x-, y- and z-, can be Cartesian or defined by the machine manufacturer."@en ;
@@ -757,7 +757,7 @@
     rdfs:subClassOf :ASTM_3.5,
         :Geometrical,
         :Noun ;
-    core:prefLabel "MachineCoordinateSystem"@en .
+    skos:prefLabel "MachineCoordinateSystem"@en .
 
 :ASTM_3.5.13 a owl:Class ;
     :astmDef "Origin (3.5.12) most commonly located at the centre of the build platform (3.3.5) and fixed on the build facing surface."@en ;
@@ -770,7 +770,7 @@
         :ASTM_3.5.12,
         :Geometrical,
         :Noun ;
-    core:prefLabel "BuildOrigin"@en .
+    skos:prefLabel "BuildOrigin"@en .
 
 :ASTM_3.5.14 a owl:Class ;
     :astmDef "Origin (3.5.12) as defined by the machine manufacturer."@en ;
@@ -781,9 +781,9 @@
         :ASTM_3.5.12,
         :Geometrical,
         :Noun ;
-    core:altLabel "MachineHome"@en,
+    skos:altLabel "MachineHome"@en,
         "MachineZeroPoint"@en ;
-    core:prefLabel "MachineOrigin"@en .
+    skos:prefLabel "MachineOrigin"@en .
 
 :ASTM_3.5.15 a owl:Class ;
     :astmDef "Location of the part (3.9.1) within the build volume (3.3.4)."@en ;
@@ -795,7 +795,7 @@
     rdfs:subClassOf :ASTM_3.5,
         :Geometrical,
         :Noun ;
-    core:prefLabel "PartLocation"@en .
+    skos:prefLabel "PartLocation"@en .
 
 :ASTM_3.5.16 a owl:Class ;
     :astmDef "<Of a machine; unless otherwise designated by the machine builder> axis in the machine coordinate system (3.5.11) that runs parallel to the front (3.1.7) of the machine and perpendicular to the y-axis (3.5.17) and z-axis (3.5.18)."@en ;
@@ -810,7 +810,7 @@
     rdfs:subClassOf :ASTM_3.5,
         :Geometrical,
         :Noun ;
-    core:prefLabel "XAxis"@en .
+    skos:prefLabel "XAxis"@en .
 
 :ASTM_3.5.17 a owl:Class ;
     :astmDef "<Of a machine; unless otherwise designated by the machine builder> axis in the machine coordinate system (3.5.11) that runs perpendicular to the x-axis (3.5.16) and z-axis (3.5.18)."@en ;
@@ -825,7 +825,7 @@
     rdfs:subClassOf :ASTM_3.5,
         :Geometrical,
         :Noun ;
-    core:prefLabel "YAxis"@en .
+    skos:prefLabel "YAxis"@en .
 
 :ASTM_3.5.18 a owl:Class ;
     :astmDef "<Of a machine; unless otherwise designated by the machine builder> axis in the machine coordinate system (3.5.11) that runs perpendicular to the x-axis (3.5.16) and y-axis (3.5.17)."@en ;
@@ -840,7 +840,7 @@
     rdfs:subClassOf :ASTM_3.5,
         :Geometrical,
         :Noun ;
-    core:prefLabel "ZAxis"@en .
+    skos:prefLabel "ZAxis"@en .
 
 :ASTM_3.5.2 a owl:Class ;
     :astmDef "<Of a part> bounding box (3.5.1) calculated without any constraints on the resulting orientation of the box."@en ;
@@ -851,7 +851,7 @@
         :ASTM_3.5.1,
         :Geometrical,
         :Noun ;
-    core:prefLabel "ArbitrarilyOrientedBoundingBox"@en .
+    skos:prefLabel "ArbitrarilyOrientedBoundingBox"@en .
 
 :ASTM_3.5.3 a owl:Class ;
     :astmDef "<Of a part> bounding box (3.5.1) for which the surfaces are parallel to the machine coordinate system (3.5.11)."@en ;
@@ -863,7 +863,7 @@
         :ASTM_3.5.1,
         :Geometrical,
         :Noun ;
-    core:prefLabel "MachineBoundingBox"@en .
+    skos:prefLabel "MachineBoundingBox"@en .
 
 :ASTM_3.5.4 a owl:Class ;
     :astmDef "Bounding box (3.5.1) which encloses all of the parts (3.9.1) in a single build."@en ;
@@ -875,7 +875,7 @@
         :ASTM_3.5.1,
         :Geometrical,
         :Noun ;
-    core:prefLabel "MasterBoundingBox"@en .
+    skos:prefLabel "MasterBoundingBox"@en .
 
 :ASTM_3.5.5 a owl:Class ;
     :astmDef "<Of a bounding box> location at the arithmetic middle of the bounding box (3.5.1)."@en ;
@@ -886,8 +886,8 @@
     rdfs:subClassOf :ASTM_3.5,
         :Geometrical,
         :Noun ;
-    core:altLabel "Centroid"@en ;
-    core:prefLabel "GeometricCentre"@en .
+    skos:altLabel "Centroid"@en ;
+    skos:prefLabel "GeometricCentre"@en .
 
 :ASTM_3.5.6 a owl:Class ;
     :astmDef "Description of the orientation of the bounding box (3.5.1) according to overall length in decreasing magnitude, parallel to the axes of the machine coordinate system (3.5.11)."@en ;
@@ -900,7 +900,7 @@
     rdfs:subClassOf :ASTM_3.5,
         :Geometrical,
         :Noun ;
-    core:prefLabel "OrthogonalOrientationNotation"@en .
+    skos:prefLabel "OrthogonalOrientationNotation"@en .
 
 :ASTM_3.5.7 a owl:Class ;
     :astmDef "<Of a part> orientation of the part as it is first placed in the build volume (3.3.4)."@en ;
@@ -911,7 +911,7 @@
     rdfs:subClassOf :ASTM_3.5,
         :Geometrical,
         :Noun ;
-    core:prefLabel "InitialBuildOrientation"@en .
+    skos:prefLabel "InitialBuildOrientation"@en .
 
 :ASTM_3.5.8 a owl:Class ;
     :astmDef "Rotation around the geometric centre (3.5.5) of the part’s bounding box (3.5.1) from the specified initial build orientation (3.5.7) of that part (3.9.1)."@en ;
@@ -925,7 +925,7 @@
     rdfs:subClassOf :ASTM_3.5,
         :Geometrical,
         :Noun ;
-    core:prefLabel "PartReorientation"@en .
+    skos:prefLabel "PartReorientation"@en .
 
 :ASTM_3.5.9 a owl:Class ;
     :astmDef "Largest external dimensions of the x-axis (3.5.16), y-axis (3.5.17) and z-axis (3.5.18) within the build space (3.3.3) where parts (3.9.1) can be fabricated."@en ;
@@ -940,7 +940,7 @@
     rdfs:subClassOf :ASTM_3.5,
         :Geometrical,
         :Noun ;
-    core:prefLabel "BuildEnvelope"@en .
+    skos:prefLabel "BuildEnvelope"@en .
 
 :ASTM_3.6.1 a owl:Class ;
     :astmDef "<Of feedstock> defined quantity of feedstock (3.6.6) with uniform properties and composition."@en ;
@@ -952,7 +952,7 @@
     rdfs:subClassOf :ASTM_3.6,
         :Material,
         :Noun ;
-    core:prefLabel "Batch"@en .
+    skos:prefLabel "Batch"@en .
 
 :ASTM_3.6.10 a owl:Class ;
     :astmDef "Process step, or series of process steps, taken after the completion of an additive manufacturing (3.1.2)build cycle (3.3.8) in order to achieve the desired properties in the final product."@en ;
@@ -963,7 +963,7 @@
     rdfs:subClassOf :ASTM_3.6,
         :Noun,
         :Process ;
-    core:prefLabel "PostProcessing"@en .
+    skos:prefLabel "PostProcessing"@en .
 
 :ASTM_3.6.2 a owl:Class ;
     :astmDef "<Of feedstock> quantity of feedstock (3.6.6) produced under traceable controlled conditions from a single manufacturing process cycle."@en ;
@@ -975,7 +975,7 @@
     rdfs:subClassOf :ASTM_3.6,
         :Material,
         :Noun ;
-    core:prefLabel "Lot"@en .
+    skos:prefLabel "Lot"@en .
 
 :ASTM_3.6.3 a owl:Class ;
     :astmDef "<Feedstock> condition of feedstock (3.6.6) from a single manufacturing lot (3.6.2) before being applied to the additive manufacturing (3.1.2) process."@en ;
@@ -992,7 +992,7 @@
     rdfs:subClassOf :ASTM_3.6,
         :ASTM_3.6.5,
         :Adjective ;
-    core:prefLabel "Virgin"@en .
+    skos:prefLabel "Virgin"@en .
 
 :ASTM_3.6.4 a owl:Class ;
     :astmDef "<Of feedstock> ability of a feedstock (3.6.6) material to be spread out in layers (3.3.7) that fulfil the requirements for the AM (3.1.2) process."@en ;
@@ -1006,7 +1006,7 @@
     rdfs:subClassOf :ASTM_3.6,
         :Noun,
         :Property ;
-    core:prefLabel "Spreadability"@en .
+    skos:prefLabel "Spreadability"@en .
 
 :ASTM_3.6.6 a owl:Class ;
     :astmDef "Entity that produces the feedstock (3.6.6)."@en ;
@@ -1017,7 +1017,7 @@
     rdfs:subClassOf :ASTM_3.6,
         :Noun,
         :Role ;
-    core:prefLabel "FeedstockManufacturer"@en .
+    skos:prefLabel "FeedstockManufacturer"@en .
 
 :ASTM_3.6.7 a owl:Class ;
     :astmDef "Provider of feedstock (3.6.6)."@en ;
@@ -1028,8 +1028,8 @@
     rdfs:subClassOf :ASTM_3.6,
         :Noun,
         :Role ;
-    core:altLabel "FeedstockVendor"@en ;
-    core:prefLabel "FeedstockSupplier"@en .
+    skos:altLabel "FeedstockVendor"@en ;
+    skos:prefLabel "FeedstockSupplier"@en .
 
 :ASTM_3.6.8 a owl:Class ;
     :astmDef "Act of uniting two or more units of material into a single unit of material."@en ;
@@ -1038,7 +1038,7 @@
     rdfs:subClassOf :ASTM_3.6,
         :Noun,
         :Process ;
-    core:prefLabel "Fusion"@en .
+    skos:prefLabel "Fusion"@en .
 
 :ASTM_3.6.9 a owl:Class ;
     :astmDef "Change the physical properties of a material by means of a chemical reaction."@en ;
@@ -1048,7 +1048,7 @@
     rdfs:subClassOf :ASTM_3.6,
         :Process,
         :Verb ;
-    core:prefLabel "Cure"@en .
+    skos:prefLabel "Cure"@en .
 
 :ASTM_3.7.1 a owl:Class ;
     :astmDef "<Material extrusion> removable sheet, to which the part (3.9.1) is attached during the build cycle (3.3.8)."@en ;
@@ -1061,7 +1061,7 @@
     rdfs:subClassOf :ASTM_3.7,
         :EquipmentPart,
         :Noun ;
-    core:prefLabel "BuildSheet"@en .
+    skos:prefLabel "BuildSheet"@en .
 
 :ASTM_3.7.2 a owl:Class ;
     :astmDef "Assembly comprising feedstock (3.6.6) delivery mechanism and extrusion nozzle(s)."@en ;
@@ -1071,8 +1071,8 @@
     rdfs:comment "A common design of the head contains a motorized pinch wheel delivery mechanism to push filament through the extrusion head. The head often contains a heating element."@en ;
     rdfs:subClassOf :ASTM_3.7,
         :Noun ;
-    core:altLabel "ExtrusionHead"@en ;
-    core:prefLabel "ExtruderHead"@en .
+    skos:altLabel "ExtrusionHead"@en ;
+    skos:prefLabel "ExtruderHead"@en .
 
 :ASTM_3.7.3 a owl:Class ;
     :astmDef "Component with an orifice through which feedstock (3.6.6) is extruded."@en ;
@@ -1082,7 +1082,7 @@
     rdfs:subClassOf :ASTM_3.7,
         :EquipmentPart,
         :Noun ;
-    core:prefLabel "ExtrusionNozzle"@en .
+    skos:prefLabel "ExtrusionNozzle"@en .
 
 :ASTM_3.7.4 a owl:Class ;
     :astmDef "Feedstock (3.6.6) characterized by extreme length relative to its uniform cross section."@en ;
@@ -1094,7 +1094,7 @@
     rdfs:subClassOf :ASTM_3.6.5,
         :ASTM_3.7,
         :Noun ;
-    core:prefLabel "Filament"@en .
+    skos:prefLabel "Filament"@en .
 
 :ASTM_3.7.5 a owl:Class ;
     :astmDef "Small mass of preformed feedstock (3.6.6) material, having relatively uniform dimensions in any given batch."@en ;
@@ -1105,7 +1105,7 @@
     rdfs:subClassOf :ASTM_3.6.5,
         :ASTM_3.7,
         :Noun ;
-    core:prefLabel "Pellets"@en .
+    skos:prefLabel "Pellets"@en .
 
 :ASTM_3.8.1 a owl:Class ;
     :astmDef "<Of feedstock> method of preparation and delivery operations performed on a specific batch of feedstock (3.6.6) as needed for the build cycle (3.3.8)."@en ;
@@ -1118,7 +1118,7 @@
     rdfs:subClassOf :ASTM_3.8,
         :Noun,
         :Process ;
-    core:prefLabel "BatchFeedProcessing"@en .
+    skos:prefLabel "BatchFeedProcessing"@en .
 
 :ASTM_3.8.10 a owl:Class ;
     :astmDef "Powder bed fusion (3.2.5) process used to produce objects from powdered materials using one or more lasers to selectively fuse or melt the particles at the surface, layer (3.3.7) upon layer, in an enclosed chamber."@en ;
@@ -1130,8 +1130,8 @@
     rdfs:subClassOf :ASTM_3.8,
         :Noun,
         :Process ;
-    core:altLabel "LS"@en ;
-    core:prefLabel "LaserSintering"@en .
+    skos:altLabel "LS"@en ;
+    skos:prefLabel "LaserSintering"@en .
 
 :ASTM_3.8.2 a owl:Class ;
     :astmDef "<Of feedstock> method of preparation and delivery operations performed to supply feedstock (3.6.6) in an uninterrupted process as needed for the build cycle (3.3.8)."@en ;
@@ -1144,7 +1144,7 @@
     rdfs:subClassOf :ASTM_3.8,
         :Noun,
         :Process ;
-    core:prefLabel "ContinuousFeedProcessing"@en .
+    skos:prefLabel "ContinuousFeedProcessing"@en .
 
 :ASTM_3.8.3 a owl:Class ;
     :astmDef "<In powder bed fusion> location in the machine where feedstock (3.6.6) is stored and from which a portion of the feedstock is repeatedly conveyed to the powder bed (3.8.5) during the build cycle (3.3.8)."@en ;
@@ -1156,7 +1156,7 @@
     rdfs:subClassOf :ASTM_3.8,
         :Geometrical,
         :Noun ;
-    core:prefLabel "FeedRegion"@en .
+    skos:prefLabel "FeedRegion"@en .
 
 :ASTM_3.8.4 a owl:Class ;
     :astmDef "<In powder bed fusion> location in the machine where excess powder is collected and stored after a layer has been deposited during a build cycle (3.3.8)."@en ;
@@ -1167,7 +1167,7 @@
     rdfs:subClassOf :ASTM_3.8,
         :Geometrical,
         :Noun ;
-    core:prefLabel "OverflowRegion"@en .
+    skos:prefLabel "OverflowRegion"@en .
 
 :ASTM_3.8.5 a owl:Class ;
     :astmDef "Location in an additive manufacturing system (3.1.3) where feedstock (3.6.6) is deposited and selectively fused by means of a heat source or bonded by means of an adhesive to build up parts (3.9.1)."@en ;
@@ -1179,8 +1179,8 @@
     rdfs:subClassOf :ASTM_3.8,
         :Geometrical,
         :Noun ;
-    core:altLabel "PartBed"@en ;
-    core:prefLabel "PowderBed"@en .
+    skos:altLabel "PartBed"@en ;
+    skos:prefLabel "PowderBed"@en .
 
 :ASTM_3.8.6 a owl:Class ;
     :astmDef "Quantity of powder made by thoroughly intermingling powders originating from one or several powder lots (3.6.2) of the same nominal composition."@en ;
@@ -1192,7 +1192,7 @@
     rdfs:subClassOf :ASTM_3.8,
         :Material,
         :Noun ;
-    core:prefLabel "PowderBlend"@en .
+    skos:prefLabel "PowderBlend"@en .
 
 :ASTM_3.8.7 a owl:Class ;
     :astmDef "Quantity of powder made by thoroughly intermingling powders of different nominal composition."@en ;
@@ -1202,8 +1202,8 @@
     rdfs:subClassOf :ASTM_3.8,
         :Material,
         :Noun ;
-    core:altLabel "PowderMixture"@en ;
-    core:prefLabel "PowderMix"@en .
+    skos:altLabel "PowderMixture"@en ;
+    skos:prefLabel "PowderMix"@en .
 
 :ASTM_3.8.8 a owl:Class ;
     :astmDef "<In a powder bed fusion process that uses a heated build chamber> lightly bound powder surrounding the fabricated parts (3.9.1) at the end of a build cycle (3.3.8)."@en ;
@@ -1214,7 +1214,7 @@
     rdfs:subClassOf :ASTM_3.8,
         :Material,
         :Noun ;
-    core:prefLabel "PartCake"@en .
+    skos:prefLabel "PartCake"@en .
 
 :ASTM_3.8.9 a owl:Class ;
     :astmDef "Powder that has been supplied as feedstock (3.6.6) to an AM machine (3.1.4) during at least one previous build cycle (3.3.8)."@en ;
@@ -1226,7 +1226,7 @@
     rdfs:subClassOf :ASTM_3.8,
         :Material,
         :Noun ;
-    core:prefLabel "UsedPowder"@en .
+    skos:prefLabel "UsedPowder"@en .
 
 :ASTM_3.9.2 a owl:Class ;
     :astmDef "Geometric arrangement composed of connective links between vertices (points) creating a functional structure."@en ;
@@ -1235,58 +1235,58 @@
     rdfs:subClassOf :ASTM_3.9,
         :Geometrical,
         :Noun ;
-    core:altLabel "LatticeStructure"@en ;
-    core:prefLabel "Lattice"@en .
+    skos:altLabel "LatticeStructure"@en ;
+    skos:prefLabel "Lattice"@en .
 
 :astmDef a owl:AnnotationProperty ;
     rdfs:comment "ASTM definition."@en ;
     rdfs:subPropertyOf rdfs:comment ;
-    core:prefLabel "astmDef"@en .
+    skos:prefLabel "astmDef"@en .
 
 :astmForeword a owl:AnnotationProperty ;
     rdfs:comment "General forword about an ASTM standard."@en ;
-    rdfs:subPropertyOf term:description ;
-    core:prefLabel "astmForeword"@en .
+    rdfs:subPropertyOf dcterms:description ;
+    skos:prefLabel "astmForeword"@en .
 
 :astmId a owl:AnnotationProperty ;
     rdfs:comment "Full ISO/ASTM identifier."@en ;
-    rdfs:subPropertyOf term:identifier ;
-    core:prefLabel "astmId"@en .
+    rdfs:subPropertyOf dcterms:identifier ;
+    skos:prefLabel "astmId"@en .
 
 :astmIntroduction a owl:AnnotationProperty ;
     rdfs:comment "Short introduction of an ASTM standard."@en ;
-    rdfs:subPropertyOf term:description ;
-    core:prefLabel "astmIntroduction"@en .
+    rdfs:subPropertyOf dcterms:description ;
+    skos:prefLabel "astmIntroduction"@en .
 
 :astmNo a owl:AnnotationProperty ;
     rdfs:comment "ASTM number."@en ;
-    rdfs:subPropertyOf term:identifier ;
-    core:prefLabel "astmNo"@en .
+    rdfs:subPropertyOf dcterms:identifier ;
+    skos:prefLabel "astmNo"@en .
 
 :astmRef a owl:AnnotationProperty ;
     rdfs:comment "A reference to another ASTM term."@en ;
     rdfs:subPropertyOf rdfs:seeAlso ;
-    core:prefLabel "astmRef"@en .
+    skos:prefLabel "astmRef"@en .
 
 :astmScope a owl:AnnotationProperty ;
     rdfs:comment "The scope of an ASTM standard."@en ;
-    rdfs:subPropertyOf term:description ;
-    core:prefLabel "astmScope"@en .
+    rdfs:subPropertyOf dcterms:description ;
+    skos:prefLabel "astmScope"@en .
 
 :example a owl:AnnotationProperty ;
     rdfs:comment "Illustrative example of how the entity is used."@en ;
     rdfs:subPropertyOf rdfs:comment ;
-    core:prefLabel "example"@en .
+    skos:prefLabel "example"@en .
 
 :Participle a owl:Class ;
     rdfs:comment "A verbal that expresses a state of an entity."@en ;
     rdfs:subClassOf :GramaticalCategorisation ;
-    core:prefLabel "Participle"@en .
+    skos:prefLabel "Participle"@en .
 
 :Verb a owl:Class ;
     rdfs:comment "Terms that are verbs."@en ;
     rdfs:subClassOf :GramaticalCategorisation ;
-    core:prefLabel "Verb"@en .
+    skos:prefLabel "Verb"@en .
 
 :ASTM_3.5.12 a owl:Class ;
     :astmDef "<When using x-, y- and z-coordinates> designated universal reference point at which the three primary axes in a coordinate system intersect."@en ;
@@ -1296,15 +1296,15 @@
     rdfs:subClassOf :ASTM_3.5,
         :Geometrical,
         :Noun ;
-    core:altLabel "(0,0,0)"@en,
+    skos:altLabel "(0,0,0)"@en,
         "ZeroPoint"@en ;
-    core:prefLabel "Origin"@en .
+    skos:prefLabel "Origin"@en .
 
 :ASTM_3.9 a owl:Class ;
     :astmDef "AM products categorised according to structure."@en ;
     :astmNo "3.9"^^xsd:string ;
     rdfs:subClassOf :ASTM_PartsRelated ;
-    core:prefLabel "GeneralParts"@en .
+    skos:prefLabel "GeneralParts"@en .
 
 :ASTM_3.9.1 a owl:Class ;
     :astmDef "Joined material forming a functional element that can constitute all or a section of an intended product."@en ;
@@ -1314,7 +1314,7 @@
     rdfs:subClassOf :ASTM_3.9,
         :Material,
         :Noun ;
-    core:prefLabel "Part"@en .
+    skos:prefLabel "Part"@en .
 
 :ASTM_3.5.1 a owl:Class ;
     :astmDef "<Of a part> orthogonally oriented minimum perimeter cuboid that can span the maximum extents of the points on the surface of a 3D part (3.9.1)."@en ;
@@ -1325,7 +1325,7 @@
     rdfs:subClassOf :ASTM_3.5,
         :Geometrical,
         :Noun ;
-    core:prefLabel "BoundingBox"@en .
+    skos:prefLabel "BoundingBox"@en .
 
 :ASTM_3.6.5 a owl:Class ;
     :astmDef "Bulk raw material supplied to the additive manufacturing (3.1.2) building process."@en ;
@@ -1336,117 +1336,117 @@
     rdfs:subClassOf :ASTM_3.6,
         :Material,
         :Noun ;
-    core:hiddenLabel "BaseMaterial"@en,
+    skos:hiddenLabel "BaseMaterial"@en,
         "OriginalMaterial"@en,
         "SourceMaterial"@en,
         "StartingMaterial"@en ;
-    core:prefLabel "Feedstock"@en .
+    skos:prefLabel "Feedstock"@en .
 
 :ASTM_3.10 a owl:Class ;
     :astmDef "Categorisation according to application within AM."@en ;
     :astmNo "3.10"^^xsd:string ;
     rdfs:subClassOf :ASTM_PartsRelated ;
-    core:prefLabel "PartApplicationRelated"@en .
+    skos:prefLabel "PartApplicationRelated"@en .
 
 :ASTM_PartsRelated a owl:Class ;
     :astmDef "The class of all terms  within additive manufaturing that are related to parts."@en ;
     rdfs:subClassOf :ThematicCategorisation ;
-    core:prefLabel "PartsRelated"@en .
+    skos:prefLabel "PartsRelated"@en .
 
 :EquipmentPart a owl:Class ;
     rdfs:comment "A part of an equipment."@en ;
     rdfs:subClassOf owl:Thing ;
-    core:prefLabel "EquipmentPart"@en .
+    skos:prefLabel "EquipmentPart"@en .
 
 :GramaticalCategorisation a owl:Class ;
     rdfs:comment "Categorisation according to grammatical category in linguistics."@en ;
     rdfs:subClassOf owl:Thing ;
-    core:prefLabel "GramaticalCategorisation"@en .
+    skos:prefLabel "GramaticalCategorisation"@en .
 
 :ThematicCategorisation a owl:Class ;
     rdfs:comment "Categorisation according to the sections in the ASTM standard."@en ;
     rdfs:subClassOf owl:Thing ;
-    core:prefLabel "ThematicCategorisation"@en .
+    skos:prefLabel "ThematicCategorisation"@en .
 
 :ASTM_3.12 a owl:Class ;
     :astmDef "Terms related to evaluation of AM products."@en ;
     :astmNo "3.12"^^xsd:string ;
     rdfs:subClassOf :ASTM_PartsRelated ;
-    core:prefLabel "PartEvaluationRelated"@en .
+    skos:prefLabel "PartEvaluationRelated"@en .
 
 :ASTM_3.7 a owl:Class ;
     :astmDef "Terms related to material extrusion processes."@en ;
     :astmNo "3.7"^^xsd:string ;
     rdfs:subClassOf :ASTM_ProcessingRelated ;
-    core:prefLabel "MaterialExtrusionRelated"@en .
+    skos:prefLabel "MaterialExtrusionRelated"@en .
 
 :Adjective a owl:Class ;
     rdfs:comment """Terms that describe or limit/restrict the meaning of a noun.
 Typically a condition."""@en ;
     rdfs:subClassOf :GramaticalCategorisation ;
-    core:prefLabel "Adjective"@en .
+    skos:prefLabel "Adjective"@en .
 
 :Equipment a owl:Class ;
     rdfs:comment """An item necessary for realising a particular purpose.
 
 -- Oxford Languages"""@en ;
     rdfs:subClassOf owl:Thing ;
-    core:prefLabel "Equipment"@en .
+    skos:prefLabel "Equipment"@en .
 
 :ASTM_ProcessingRelated a owl:Class ;
     :astmDef "Terms related to AM processing."@en ;
     rdfs:subClassOf :ThematicCategorisation ;
-    core:prefLabel "ProcessingRelated"@en .
+    skos:prefLabel "ProcessingRelated"@en .
 
 :Property a owl:Class ;
     rdfs:comment """An attribute, quality or characteristic of something.
 
 -- Oxford Languages"""@en ;
     rdfs:subClassOf owl:Thing ;
-    core:prefLabel "Property"@en .
+    skos:prefLabel "Property"@en .
 
 :ASTM_3.2 a owl:Class ;
     :astmDef "Categorisation according to AM processing architecture."@en ;
     :astmNo "3.2"^^xsd:string ;
     rdfs:subClassOf :Process,
         :ThematicCategorisation ;
-    core:prefLabel "ProcessCategories"@en .
+    skos:prefLabel "ProcessCategories"@en .
 
 :Role a owl:Class ;
     :example "A person or a software."@en ;
     rdfs:comment "An actor's part in a process."@en ;
     rdfs:subClassOf owl:Thing ;
-    core:prefLabel "Role"@en .
+    skos:prefLabel "Role"@en .
 
 :ASTM_3.11 a owl:Class ;
     :astmDef "Part-related properties."@en ;
     :astmNo "3.11"^^xsd:string ;
     rdfs:subClassOf :ASTM_PartsRelated ;
-    core:prefLabel "PartPropertyRelated"@en .
+    skos:prefLabel "PartPropertyRelated"@en .
 
 :ASTM_3.1 a owl:Class ;
     :astmDef "General concepts related to additive manufacturing."@en ;
     :astmNo "3.1"^^xsd:string ;
     rdfs:subClassOf :ThematicCategorisation ;
-    core:prefLabel "GeneralConcepts"@en .
+    skos:prefLabel "GeneralConcepts"@en .
 
 :ASTM_3.6 a owl:Class ;
     :astmDef "Terms related to material (including part material and feedstock) in AM processing."@en ;
     :astmNo "3.6"^^xsd:string ;
     rdfs:subClassOf :ASTM_ProcessingRelated ;
-    core:prefLabel "MaterialRelated"@en .
+    skos:prefLabel "MaterialRelated"@en .
 
 :ASTM_3.8 a owl:Class ;
     :astmDef "Terms related to powder bed fusion."@en ;
     :astmNo "3.8"^^xsd:string ;
     rdfs:subClassOf :ASTM_ProcessingRelated ;
-    core:prefLabel "PowderBedFusionRelated"@en .
+    skos:prefLabel "PowderBedFusionRelated"@en .
 
 :ASTM_3.4 a owl:Class ;
     :astmDef "Terms related to software and data handling."@en ;
     :astmNo "3.4"^^xsd:string ;
     rdfs:subClassOf :ASTM_ProcessingRelated ;
-    core:prefLabel "DataRelated"@en .
+    skos:prefLabel "DataRelated"@en .
 
 :Data a owl:Class ;
     :example "A morse code radio transmission."@en ;
@@ -1454,26 +1454,26 @@ Typically a condition."""@en ;
 an agent and that can be decoded by another agent according to
 a specific rule."""@en ;
     rdfs:subClassOf owl:Thing ;
-    core:prefLabel "Data"@en .
+    skos:prefLabel "Data"@en .
 
 :ASTM_3.3 a owl:Class ;
     :astmDef "General concepts related to AM processing."@en ;
     :astmNo "3.3"^^xsd:string ;
     rdfs:subClassOf :ASTM_ProcessingRelated ;
-    core:prefLabel "GeneralProcessing"@en .
+    skos:prefLabel "GeneralProcessing"@en .
 
 :Material a owl:Class ;
     rdfs:comment """A real world material representing an amount of a physical
 substance (or mixture of substances) in different states of
 matter or phases."""@en ;
     rdfs:subClassOf owl:Thing ;
-    core:prefLabel "Material"@en .
+    skos:prefLabel "Material"@en .
 
 :ASTM_3.5 a owl:Class ;
     :astmDef "Terms related to AM positioning, coordinates and orientation."@en ;
     :astmNo "3.5"^^xsd:string ;
     rdfs:subClassOf :ASTM_ProcessingRelated ;
-    core:prefLabel "PositioningCoordinatesAndOrientation"@en .
+    skos:prefLabel "PositioningCoordinatesAndOrientation"@en .
 
 :Process a owl:Class ;
     rdfs:comment """A series of actions or steps taken in order to achieve a
@@ -1481,15 +1481,15 @@ particular end.
 
 -- Oxford Languages"""@en ;
     rdfs:subClassOf owl:Thing ;
-    core:prefLabel "Process"@en .
+    skos:prefLabel "Process"@en .
 
 :Geometrical a owl:Class ;
     rdfs:comment "A geometrical object, like a position, an area or a volume."@en ;
     rdfs:subClassOf :Data ;
-    core:prefLabel "Geometrical"@en .
+    skos:prefLabel "Geometrical"@en .
 
 :Noun a owl:Class ;
     rdfs:comment "Terms that are nouns, i.e. that are names of something."@en ;
     rdfs:subClassOf :GramaticalCategorisation ;
-    core:prefLabel "Noun"@en .
+    skos:prefLabel "Noun"@en .
 
