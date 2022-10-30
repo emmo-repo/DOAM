@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <group id="Folder Repository, directory=, recursive=true, Auto-Update=false, version=2" prefer="public" xml:base="">
     <uri id="Imports Wizard Entry" name="http://emmo.info/doam/astm52900/2021v1.1#" uri="astm52900.ttl"/>
-    <group id="Folder Repository, directory=, recursive=true, Auto-Update=false, version=2" prefer="public" xml:base=""/>
     <uri name="http://emmo.info/doam/astm52900/2021v1.1" uri="./astm52900.ttl"/>
+  </group>
 </catalog>
