@@ -18,10 +18,10 @@ Attributions and credits
 ------------------------
 
 ### Authors and contacts
-* Klas Boivie, SINTEF
 * Jesper Friis, SINTEF
 * Sylvain Gouttebroze, SINTEF
 * Even Wilberg Hovig, SINTEF
+* Klas Boivie, SINTEF
 
 ### Contributing projects
 * [SFI Manufacturing].  Funded by partners and the Research Council of Norway
