@@ -1,3 +1,6 @@
+[![DOI](https://zenodo.org/badge/568545523.svg)](https://zenodo.org/badge/latestdoi/568545523)
+
+
 Domain Ontology for Additive Manufacturing (DOAM)
 =================================================
 DOAM is an ontologisation of [ISO/ASTM 52900] which provides a
