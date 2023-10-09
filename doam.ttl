@@ -12,7 +12,7 @@
 @base <http://emmo.info/doam#> .
 
 <http://emmo.info/doam#> rdf:type owl:Ontology ;
-                               owl:versionIRI <http://emmo.info/doam/0.1#> ;
+                               owl:versionIRI <http://emmo.info/doam/0.1.2#> ;
     owl:imports <http://emmo.info/doam/astm52900/2021v1.1> ,
     <http://emmo.info/emmo/1.0.0-beta5/perspectives/data> ,
     <http://emmo.info/emmo/1.0.0-beta5/perspectives/holistic> ,
@@ -27,7 +27,7 @@
                                dcterms:publisher "SFI Manufacturing"@en ;
                                dcterms:created "2022-10-30"@en ;
                                dcterms:title "Domain Ontology for Additive Manufacturing (DOAM)"@en ;
-                               owl:versionInfo "0.1"@en .
+                               owl:versionInfo "0.1.2"@en .
 
 #################################################################
 #    Classes
