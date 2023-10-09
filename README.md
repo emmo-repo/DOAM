@@ -1,4 +1,5 @@
-[![DOI](https://zenodo.org/badge/568545523.svg)](https://zenodo.org/badge/latestdoi/568545523)
+[![DOI](https://zenodo.org/badge/348298817.svg)](https://zenodo.org/badge/latestdoi/348298817)
+
 
 
 Domain Ontology for Additive Manufacturing (DOAM)
