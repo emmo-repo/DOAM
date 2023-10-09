@@ -21,6 +21,7 @@
                                                    "Sylvain Gouttebroze, SINTEF, NO"@en ;
                                    dcterms:license "https://creativecommons.org/licenses/by/4.0/legalcode"@en ;
                                    dcterms:rightsHolder "SINTEF, NO"^^xsd:string ;
+                                   dcterms:created "2021-11-05"@en ;
                                    dcterms:title "ISO/ASTM 52900:2021 Additive manufacturing - General principles - Fundamentals and vocabulary"@en ;
                                    rdfs:comment "The CC BY 4.0 license applies to this document, not to the source from which it was generated."@en ,
                                                 "The version consists of two parts, first an identifier for the version of the ISO/ASTM standard followed by a point and the version of the generated ontology."@en ,

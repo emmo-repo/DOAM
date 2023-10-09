@@ -24,6 +24,7 @@
                                                "Sylvain Gouttebroze, SINTEF, NO"@en ;
                                dcterms:license "https://creativecommons.org/licenses/by/4.0/legalcode"@en ;
                                dcterms:publisher "SFI Manufacturing"@en ;
+                               dcterms:created "2022-10-30"@en ;
                                dcterms:title "Domain Ontology for Additive Manufacturing (DOAM)"@en ;
                                owl:versionInfo "0.0.1"@en .
 
